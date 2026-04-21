@@ -1,0 +1,35 @@
+{
+  "pipeline": "/animated-website",
+  "generatedAt": "2026-04-19T00:00:00Z",
+  "briefSource": "brief.txt",
+  "mcp": {
+    "stitch": "fired",
+    "firecrawl": "fired",
+    "magic": "fell-back"
+  },
+  "skills": {
+    "brand": "fired",
+    "ui-ux-pro-max": "fired",
+    "design-system": "fired",
+    "design": "fell-back",
+    "ui-styling": "fired",
+    "nano-banana-2": "fell-back"
+  },
+  "images": {
+    "hero": "tier-3",
+    "lie-detector-widget": "tier-3",
+    "parchment-card": "tier-3",
+    "category-icons": "tier-3",
+    "knight-portraits": "tier-3"
+  },
+  "notes": {
+    "stitch": "Fired — generated 2 screens (Lie Detector+Excuse Output, Knights of Alibi) via project 1388082247921161547. Hero screen timed out, hand-coded instead.",
+    "firecrawl": "Fired — scraped https://www.mutwerk.org/. Borrowed: overline section labels, card grid rhythm, accordion FAQ pattern. Avoided: muted palette, institutional tone.",
+    "magic": "Fell-back — 21st_magic_component_builder returned [object Object]. Hero section hand-coded.",
+    "design": "Fell-back — logo/icon generation scripts not found at expected paths. Logo and 10 icons hand-authored as inline SVGs.",
+    "nano-banana-2": "Fell-back — infsh CLI not installed. All 5 image types fell to Tier 3 hand-authored SVG with feTurbulence, directional radial gradients, multi-layer painterly depth, atmospheric blur.",
+    "ui-ux-pro-max": "Fired — style confirmed as Soft Claymorphism with painterly storybook accents. Color palette overridden from script output to match brief-specified warm tokens.",
+    "design-system": "Fired — three-layer token architecture (primitive/semantic/component) as CSS custom properties on :root.",
+    "brand": "Fired — brand-guidelines.md created with Jester-Sage archetype, all copy inventory for 18 knights, 5 verdict labels, 7 FAQ pairs, toast messages, OG meta."
+  }
+}

@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<!-- build-provenance
+  pipeline: /animated-website
+  generated-at: 2026-04-19T00:00:00Z
+  brief-source: brief.txt
+  mcp:
+    stitch: fired
+    firecrawl: fired
+    magic: fell-back
+  skills:
+    brand: fired
+    ui-ux-pro-max: fired
+    design-system: fired
+    design: fell-back
+    ui-styling: fired
+    nano-banana-2: fell-back
+  images:
+    hero: tier-3
+    lie-detector-widget: tier-3
+    parchment-card: tier-3
+    category-icons: tier-3
+    knight-portraits: tier-3
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Excuse Generator 3000 — Hark! Forge a Lie of Noble Proportion</title>
+<meta name="description" content="Generate medieval excuses for modern problems. Our Knightly Lie Detector rates your alibi's believability. Hark — try it now!"/>
+<meta property="og:title" content="Excuse Generator 3000"/>
+<meta property="og:description" content="Hark! Forge a lie of noble proportion. Medieval excuses rated by the Knightly Lie Detector."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="og-card.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Excuse Generator 3000 — Hark!"/>
+<meta name="twitter:description" content="Generate medieval excuses for modern problems. Rated by the Knightly Lie Detector."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#D94F3B', 'primary-h': '#E8705A',
+        secondary: '#5B2D8E', 'secondary-h': '#7340A8',
+        tertiary: '#2D6A4F', accent: '#D4960F',
+        surface: '#FDF6E3', 'surface-r': '#F5EDD8', 'surface-o': '#EDE0C4',
+        ink: '#2C1A0E', 'ink-m': '#4A2F1A', 'ink-s': '#8B6347',
+        truth: '#2D6A4F', lie: '#D94F3B',
+      },
+      fontFamily: {
+        display: ['Cinzel','serif'],
+        body: ['Nunito','sans-serif'],
+        verdict: ['Caveat','cursive'],
+      },
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Excuse Generator 3000",
+  "description":"Generate medieval excuses for modern problems, rated by the Knightly Lie Detector.",
+  "applicationCategory":"Entertainment",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+}
+</script>
+<style>
+:root {
+  --color-primary:#D94F3B; --color-primary-h:#E8705A;
+  --color-secondary:#5B2D8E; --color-secondary-h:#7340A8;
+  --color-tertiary:#2D6A4F; --color-accent:#D4960F;
+  --color-surface:#FDF6E3; --color-surface-r:#F5EDD8; --color-surface-o:#EDE0C4;
+  --color-ink:#2C1A0E; --color-ink-m:#4A2F1A; --color-ink-s:#8B6347;
+  --font-display:'Cinzel',serif; --font-body:'Nunito',sans-serif; --font-verdict:'Caveat',cursive;
+  --radius-sm:8px; --radius-md:16px; --radius-lg:24px; --radius-xl:32px; --radius-pill:9999px;
+  --shadow-sm:0 2px 8px rgba(44,26,14,.08),0 1px 2px rgba(44,26,14,.05);
+  --shadow-md:0 8px 24px rgba(44,26,14,.10),0 2px 8px rgba(44,26,14,.06);
+  --shadow-lg:0 16px 48px rgba(44,26,14,.12),0 4px 16px rgba(44,26,14,.08);
+  --shadow-clay:0 8px 0 rgba(44,26,14,.15),0 12px 24px rgba(44,26,14,.10);
+  --ease-enter:cubic-bezier(.22,1,.36,1); --ease-spring:cubic-bezier(.34,1.56,.64,1);
+  --dur-micro:150ms; --dur-std:300ms; --dur-exp:600ms; --dur-hero:900ms;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--color-surface);color:var(--color-ink);font-family:var(--font-body);overflow-x:hidden}
+/* Skip link */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;padding:8px 16px;background:var(--color-primary);color:#fff;border-radius:0 0 var(--radius-md) 0;font-family:var(--font-body);font-weight:700}
+.skip-link:focus{left:0}
+/* Buttons */
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--color-primary);color:#fff;border-radius:var(--radius-pill);font-family:var(--font-body);font-weight:700;font-size:1rem;border:none;cursor:pointer;box-shadow:var(--shadow-clay);transition:transform var(--dur-micro) var(--ease-enter),box-shadow var(--dur-std) var(--ease-enter),background var(--dur-micro);text-decoration:none}
+.btn-primary:hover{background:var(--color-primary-h);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-primary:active{transform:translateY(0);box-shadow:var(--shadow-sm)}
+.btn-primary:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;background:transparent;color:var(--color-secondary);border-radius:var(--radius-pill);font-family:var(--font-body);font-weight:700;font-size:1rem;border:2px solid var(--color-secondary);cursor:pointer;transition:transform var(--dur-micro) var(--ease-enter),background var(--dur-std),color var(--dur-std);text-decoration:none}
+.btn-secondary:hover{background:var(--color-secondary);color:#fff;transform:translateY(-2px)}
+.btn-secondary:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
+.btn-ghost{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:transparent;color:var(--color-ink);border-radius:var(--radius-pill);font-family:var(--font-body);font-weight:600;font-size:.9rem;border:1.5px solid var(--color-surface-o);cursor:pointer;transition:background var(--dur-micro),border-color var(--dur-micro)}
+.btn-ghost:hover{background:var(--color-surface-r);border-color:var(--color-ink-s)}
+.btn-ghost:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+/* Cards */
+.card-clay{background:var(--color-surface-r);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);transition:transform var(--dur-std) var(--ease-enter),box-shadow var(--dur-std) var(--ease-enter)}
+.card-clay:hover{transform:translateY(-4px) rotate(.5deg);box-shadow:var(--shadow-lg)}
+.parchment{background:var(--color-surface);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.parchment::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(44,26,14,.03) 28px,rgba(44,26,14,.03) 29px);pointer-events:none}
+/* Section label */
+.section-label{font-family:var(--font-display);font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--color-primary);display:block;margin-bottom:.75rem}
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity var(--dur-exp) var(--ease-enter),transform var(--dur-exp) var(--ease-enter)}
+.reveal.in-view{opacity:1;transform:none}
+/* Stagger children */
+.stagger-children>.reveal:nth-child(1){transition-delay:0ms}
+.stagger-children>.reveal:nth-child(2){transition-delay:80ms}
+.stagger-children>.reveal:nth-child(3){transition-delay:160ms}
+.stagger-children>.reveal:nth-child(4){transition-delay:240ms}
+.stagger-children>.reveal:nth-child(5){transition-delay:320ms}
+.stagger-children>.reveal:nth-child(6){transition-delay:400ms}
+/* Sparkle */
+@keyframes sparkle{0%,100%{opacity:0;transform:scale(0) rotate(0deg)}50%{opacity:1;transform:scale(1) rotate(180deg)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+@keyframes needle-swing{0%{transform:rotate(var(--needle-from,0deg)) translateX(-50%)}70%{transform:rotate(calc(var(--needle-to,0deg) + 8deg)) translateX(-50%)}100%{transform:rotate(var(--needle-to,0deg)) translateX(-50%)}}
+@keyframes led-blink{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes bounce-generate{0%,100%{transform:scale(1)}40%{transform:scale(.94)}70%{transform:scale(1.06)}85%{transform:scale(.98)}}
+@keyframes excuse-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes slide-in-right{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:none}}
+@keyframes slide-out-right{from{opacity:1;transform:none}to{opacity:0;transform:translateX(60px)}}
+@keyframes modal-in{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+@keyframes hero-word{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.sparkle{position:absolute;pointer-events:none;animation:sparkle 2s ease-in-out infinite}
+.float-anim{animation:float 6s ease-in-out infinite}
+.breathe{animation:breathe 6s ease-in-out infinite}
+/* Nav */
+nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(253,246,227,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--color-surface-o);box-shadow:var(--shadow-sm)}
+/* Lie detector */
+.gauge-needle{position:absolute;bottom:50%;left:50%;width:4px;transform-origin:bottom center;transform:rotate(0deg) translateX(-50%);transition:transform var(--dur-exp) cubic-bezier(.34,1.56,.64,1)}
+.led{width:10px;height:10px;border-radius:50%;background:var(--color-accent);opacity:.35;box-shadow:0 0 8px var(--color-accent)}
+.led.active{opacity:1;animation:led-blink .3s ease-in-out 3}
+/* Category tabs */
+.cat-tab{padding:10px 22px;border-radius:var(--radius-pill);font-family:var(--font-body);font-weight:700;font-size:.9rem;border:2px solid transparent;cursor:pointer;transition:background var(--dur-std),color var(--dur-std),border-color var(--dur-std);white-space:nowrap;background:var(--color-surface-r);color:var(--color-ink-m)}
+.cat-tab:hover{background:var(--color-surface-o)}
+.cat-tab.active{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+.cat-tab:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--color-surface-o)}
+.faq-btn{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 0;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--color-ink);gap:16px}
+.faq-btn:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px;border-radius:4px}
+.faq-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--color-surface-o);display:flex;align-items:center;justify-content:center;transition:transform 200ms var(--ease-enter),background 200ms}
+.faq-icon svg{transition:transform 200ms var(--ease-enter)}
+.faq-item.open .faq-icon svg{transform:rotate(180deg)}
+.faq-item.open .faq-icon{background:var(--color-primary);color:#fff}
+.faq-body{overflow:hidden;height:0;transition:height 280ms var(--ease-enter)}
+.faq-inner{padding:0 0 20px;font-family:var(--font-body);color:var(--color-ink-m);line-height:1.65}
+/* Carousel */
+.carousel-track{display:flex;transition:transform 500ms var(--ease-enter)}
+.carousel-dot{width:8px;height:8px;border-radius:50%;background:var(--color-surface-o);cursor:pointer;transition:background var(--dur-std),width var(--dur-std)}
+.carousel-dot.active{background:var(--color-primary);width:24px;border-radius:4px}
+/* Toast */
+#toast-container{position:fixed;bottom:20px;right:20px;z-index:9000;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+.toast{pointer-events:all;display:flex;align-items:center;gap:12px;padding:14px 20px;border-radius:var(--radius-pill);box-shadow:var(--shadow-lg);font-family:var(--font-body);font-weight:600;font-size:.9rem;color:#fff;max-width:340px;animation:slide-in-right var(--dur-std) var(--ease-enter) both;cursor:pointer}
+.toast.dismissing{animation:slide-out-right 200ms var(--ease-enter) both}
+.toast.success{background:var(--color-tertiary)}
+.toast.info{background:var(--color-secondary)}
+.toast.warning{background:var(--color-accent);color:var(--color-ink)}
+/* Modal */
+#knight-modal-overlay{display:none;position:fixed;inset:0;background:rgba(44,26,14,.6);z-index:500;align-items:center;justify-content:center;padding:20px}
+#knight-modal-overlay.open{display:flex}
+#knight-modal{background:var(--color-surface);border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);max-width:580px;width:100%;max-height:90vh;overflow-y:auto;animation:modal-in var(--dur-std) var(--ease-spring) both;position:relative}
+/* Knight portrait gradient */
+.knight-portrait{aspect-ratio:3/4;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:3rem;font-weight:900;color:rgba(255,255,255,.85);position:relative;overflow:hidden}
+.knight-portrait .breed-label{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.45);color:#fff;padding:4px 12px;border-radius:var(--radius-pill);font-family:var(--font-body);font-size:.65rem;font-weight:700;white-space:nowrap;backdrop-filter:blur(4px)}
+/* Top Rated */
+.top-row{display:flex;align-items:center;gap:16px;padding:16px 20px;border-radius:var(--radius-md);background:var(--color-surface-r);transition:background var(--dur-micro)}
+.top-row:hover{background:var(--color-surface-o)}
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  .reveal{transition:opacity 200ms}
+  .card-clay{transition:none}
+  .gauge-needle{transition:transform 200ms}
+  .sparkle,.float-anim,.breathe{animation:none}
+  .carousel-track{transition:none}
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:200ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Skip link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3 no-underline" aria-label="Excuse Generator 3000 home">
+      <!-- Logo SVG icon -->
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <circle cx="18" cy="18" r="17" fill="#D94F3B" stroke="#2C1A0E" stroke-width="1.5"/>
+        <!-- Paw print -->
+        <ellipse cx="18" cy="22" rx="7" ry="6" fill="#FDF6E3"/>
+        <circle cx="13" cy="16.5" r="2.5" fill="#FDF6E3"/>
+        <circle cx="18" cy="14.5" r="2.5" fill="#FDF6E3"/>
+        <circle cx="23" cy="16.5" r="2.5" fill="#FDF6E3"/>
+        <!-- Crown -->
+        <path d="M12 13 L14 8 L18 11 L22 8 L24 13 Z" fill="#D4960F" stroke="#2C1A0E" stroke-width=".8" stroke-linejoin="round"/>
+        <!-- Quill -->
+        <path d="M20 24 Q24 18 26 14 Q22 17 20 22 Z" fill="#FDF6E3" opacity=".8"/>
+        <line x1="20" y1="24" x2="21.5" y2="27" stroke="#2C1A0E" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span class="font-display font-bold text-ink text-lg hidden sm:block">Excuse Generator <span class="text-primary">3000</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#generator" class="font-body font-600 text-ink-m hover:text-primary transition-colors text-sm no-underline">Generator</a>
+      <a href="#knights" class="font-body font-600 text-ink-m hover:text-primary transition-colors text-sm no-underline">Knights</a>
+      <a href="#top-rated" class="font-body font-600 text-ink-m hover:text-primary transition-colors text-sm no-underline">Top Rated</a>
+      <a href="#faq" class="font-body font-600 text-ink-m hover:text-primary transition-colors text-sm no-underline">FAQ</a>
+    </div>
+    <a href="#generator" class="btn-primary text-sm" style="padding:10px 22px">Generate Excuse</a>
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main id="main-content">
+
+<!-- ===== 1. HERO ===== -->
+<section aria-label="Hero" style="padding-top:80px;background:var(--color-surface);overflow:hidden;position:relative;min-height:100vh;display:flex;align-items:center">
+  <!-- Sparkles -->
+  <div aria-hidden="true" id="sparkle-field" style="position:absolute;inset:0;pointer-events:none;z-index:0"></div>
+
+  <div class="max-w-7xl mx-auto px-6 py-24 w-full" style="position:relative;z-index:1">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Left: Copy -->
+      <div>
+        <span class="section-label reveal">CHÂTEAU BARKALOT PRESENTS</span>
+        <h1 id="hero-headline" class="font-display font-black text-ink leading-tight mb-6" style="font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.1" aria-label="Excuse Generator 3000">
+          <!-- Words injected by JS for stagger animation -->
+        </h1>
+        <p class="font-body text-ink-m text-xl mb-4 reveal" style="font-size:1.3rem;line-height:1.5;max-width:480px">
+          Hark! Forge an alibi of noble proportions.
+        </p>
+        <p class="font-body text-ink-s mb-10 reveal" style="max-width:440px;line-height:1.65">
+          From missed deadlines to stood-up dates — thy medieval excuse awaits. Rated by our Knightly Lie Detector. No jousting required.
+        </p>
+        <div class="flex flex-wrap gap-4 reveal">
+          <a href="#generator" class="btn-primary" id="hero-cta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            Generate Excuse
+          </a>
+          <a href="#knights" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Meet the Knights
+          </a>
+        </div>
+        <!-- Trust badges -->
+        <div class="flex flex-wrap gap-6 mt-10 reveal">
+          <div class="flex items-center gap-2 text-ink-s text-sm font-body">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-tertiary)" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            18 Knight-Approved
+          </div>
+          <div class="flex items-center gap-2 text-ink-s text-sm font-body">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            32 Unique Excuses
+          </div>
+          <div class="flex items-center gap-2 text-ink-s text-sm font-body">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-primary)" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            0ms Wait Time
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Hero illustration (Tier 3 SVG) -->
+      <div class="flex justify-center lg:justify-end reveal">
+        <div class="breathe" style="width:min(520px,100%);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg)">
+          <svg viewBox="0 0 520 560" xmlns="http://www.w3.org/2000/svg" width="100%" role="img" aria-label="A guilty-looking golden retriever knight in a red tabard and golden crown sits at a round wooden tavern table, holding a quill and scroll, with a small green dragon toy nearby. Warm candlelight glows from within a cozy stone castle.">
+            <defs>
+              <filter id="fur-tex" x="-5%" y="-5%" width="110%" height="110%">
+                <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="4" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+              <filter id="bg-blur-h"><feGaussianBlur stdDeviation="3"/></filter>
+              <radialGradient id="win-light" cx="10%" cy="15%" r="70%">
+                <stop offset="0%" stop-color="#FFD49A" stop-opacity=".55"/>
+                <stop offset="100%" stop-color="#C8882A" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="candle-lgt" cx="50%" cy="95%" r="55%">
+                <stop offset="0%" stop-color="#FF9F3A" stop-opacity=".45"/>
+                <stop offset="100%" stop-color="#D94F3B" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="candle-glow-local" cx="70%" cy="82%" r="20%" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FF9F3A" stop-opacity=".5"/>
+                <stop offset="100%" stop-color="#FF9F3A" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="bg-wall" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4A2F1A"/>
+                <stop offset="100%" stop-color="#2C1A0E"/>
+              </linearGradient>
+              <linearGradient id="stone-row" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#6B4423" stop-opacity=".4"/>
+                <stop offset="100%" stop-color="#4A2F1A" stop-opacity=".7"/>
+              </linearGradient>
+              <linearGradient id="fur-main" x1="10%" y1="0%" x2="90%" y2="100%">
+                <stop offset="0%" stop-color="#F5C56C"/>
+                <stop offset="45%" stop-color="#D4960F"/>
+                <stop offset="100%" stop-color="#A67C00"/>
+              </linearGradient>
+              <linearGradient id="fur-shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#C8882A" stop-opacity=".3"/>
+                <stop offset="100%" stop-color="#6B4000" stop-opacity=".8"/>
+              </linearGradient>
+              <radialGradient id="fur-highlight" cx="35%" cy="28%" r="55%">
+                <stop offset="0%" stop-color="#FFE09A" stop-opacity=".6"/>
+                <stop offset="100%" stop-color="#D4960F" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="tabard-g" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#E8705A"/>
+                <stop offset="100%" stop-color="#8B2A1A"/>
+              </linearGradient>
+              <linearGradient id="crown-g" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFE57A"/>
+                <stop offset="100%" stop-color="#B8790A"/>
+              </linearGradient>
+              <linearGradient id="table-g" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#8B5E3C"/>
+                <stop offset="100%" stop-color="#4A2F1A"/>
+              </linearGradient>
+              <linearGradient id="scroll-g" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FDF6E3"/>
+                <stop offset="100%" stop-color="#EDE0C4"/>
+              </linearGradient>
+            </defs>
+            <!-- Stone wall background -->
+            <rect width="520" height="560" fill="url(#bg-wall)"/>
+            <!-- Stone blocks (blurred for atmosphere) -->
+            <g filter="url(#bg-blur-h)" opacity=".5">
+              <rect x="0" y="0" width="520" height="80" fill="url(#stone-row)"/>
+              <rect x="0" y="80" width="520" height="80" fill="url(#stone-row)" opacity=".7"/>
+              <rect x="0" y="160" width="520" height="80" fill="url(#stone-row)" opacity=".5"/>
+              <line x1="0" y1="80" x2="520" y2="80" stroke="#2C1A0E" stroke-width="3"/>
+              <line x1="0" y1="160" x2="520" y2="160" stroke="#2C1A0E" stroke-width="3"/>
+              <line x1="0" y1="240" x2="520" y2="240" stroke="#2C1A0E" stroke-width="2"/>
+              <line x1="130" y1="0" x2="130" y2="80" stroke="#2C1A0E" stroke-width="2"/>
+              <line x1="390" y1="0" x2="390" y2="80" stroke="#2C1A0E" stroke-width="2"/>
+              <line x1="65" y1="80" x2="65" y2="160" stroke="#2C1A0E" stroke-width="2"/>
+              <line x1="260" y1="80" x2="260" y2="160" stroke="#2C1A0E" stroke-width="2"/>
+              <line x1="455" y1="80" x2="455" y2="160" stroke="#2C1A0E" stroke-width="2"/>
+            </g>
+            <!-- Tapestry hint (deep purple rectangle, blurred) -->
+            <rect x="60" y="20" width="180" height="120" rx="4" fill="#5B2D8E" opacity=".25" filter="url(#bg-blur-h)"/>
+            <!-- Window glow from left -->
+            <rect width="520" height="560" fill="url(#win-light)"/>
+            <!-- Table -->
+            <ellipse cx="260" cy="530" rx="260" ry="65" fill="#4A2F1A"/>
+            <ellipse cx="260" cy="490" rx="250" ry="48" fill="url(#table-g)" filter="url(#fur-tex)"/>
+            <ellipse cx="260" cy="488" rx="244" ry="36" fill="#8B5E3C" opacity=".25"/>
+            <!-- Dog BODY layers (3 layers for painterly depth) -->
+            <ellipse cx="262" cy="420" rx="125" ry="145" fill="#A67C00" opacity=".2" filter="url(#bg-blur-h)"/>
+            <path d="M 145 490 Q 145 310 262 265 Q 380 310 375 490 Z" fill="url(#fur-main)" filter="url(#fur-tex)"/>
+            <path d="M 175 480 Q 175 330 262 295 Q 350 330 345 480 Z" fill="#F5C56C" opacity=".3" style="mix-blend-mode:overlay"/>
+            <path d="M 200 470 Q 200 360 262 330 Q 325 360 320 470 Z" fill="url(#fur-shadow)" style="mix-blend-mode:multiply"/>
+            <!-- TABARD -->
+            <path d="M 162 385 Q 155 460 200 475 L 262 470 L 325 475 Q 370 460 358 385 Q 318 365 262 360 Q 207 365 162 385 Z" fill="url(#tabard-g)"/>
+            <!-- Tabard cross -->
+            <rect x="249" y="375" width="26" height="80" rx="4" fill="#D4960F"/>
+            <rect x="215" y="408" width="94" height="24" rx="4" fill="#D4960F"/>
+            <!-- EAR LEFT (2 layers) -->
+            <path d="M 162 290 Q 130 340 148 390 Q 172 415 195 375 Q 205 340 200 290 Z" fill="#C8882A" filter="url(#fur-tex)"/>
+            <path d="M 168 295 Q 140 342 155 385 Q 175 405 193 370 Q 200 338 197 295 Z" fill="#A67C00" opacity=".5" style="mix-blend-mode:multiply"/>
+            <!-- EAR RIGHT -->
+            <path d="M 362 290 Q 392 340 373 390 Q 350 415 328 375 Q 318 340 322 290 Z" fill="#C8882A" filter="url(#fur-tex)"/>
+            <path d="M 356 295 Q 384 342 368 385 Q 348 405 330 370 Q 323 338 326 295 Z" fill="#A67C00" opacity=".5" style="mix-blend-mode:multiply"/>
+            <!-- HEAD (3 layers) -->
+            <ellipse cx="265" cy="250" rx="108" ry="98" fill="#A67C00" opacity=".3" transform="translate(6,10)" filter="url(#bg-blur-h)"/>
+            <ellipse cx="262" cy="244" rx="104" ry="95" fill="url(#fur-main)" filter="url(#fur-tex)"/>
+            <ellipse cx="262" cy="244" rx="104" ry="95" fill="url(#fur-highlight)"/>
+            <!-- MUZZLE (2 layers) -->
+            <ellipse cx="262" cy="278" rx="52" ry="38" fill="#E8B86A"/>
+            <ellipse cx="262" cy="275" rx="46" ry="30" fill="#F5C878" opacity=".8"/>
+            <!-- Nose -->
+            <ellipse cx="262" cy="260" rx="17" ry="11" fill="#1A0A00"/>
+            <ellipse cx="257" cy="257" rx="6" ry="4" fill="rgba(255,255,255,.3)"/>
+            <!-- Guilty mouth - slight frown -->
+            <path d="M 248 290 Q 262 296 276 290" stroke="#2C1A0E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- EYE LEFT (Pixar oversized) -->
+            <ellipse cx="225" cy="235" rx="26" ry="28" fill="white"/>
+            <ellipse cx="227" cy="238" rx="19" ry="20" fill="#5C3010"/>
+            <ellipse cx="225" cy="239" rx="13" ry="14" fill="#1A0A00"/>
+            <ellipse cx="218" cy="232" rx="6" ry="6" fill="white"/>
+            <ellipse cx="231" cy="228" rx="3" ry="3" fill="white"/>
+            <!-- Brow left (guilty — inner raised) -->
+            <path d="M 205 218 Q 218 208 232 215" stroke="#A67C00" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <!-- EYE RIGHT -->
+            <ellipse cx="299" cy="235" rx="26" ry="28" fill="white"/>
+            <ellipse cx="297" cy="238" rx="19" ry="20" fill="#5C3010"/>
+            <ellipse cx="299" cy="239" rx="13" ry="14" fill="#1A0A00"/>
+            <ellipse cx="306" cy="232" rx="6" ry="6" fill="white"/>
+            <ellipse cx="293" cy="228" rx="3" ry="3" fill="white"/>
+            <!-- Brow right (guilty) -->
+            <path d="M 292 215 Q 306 208 319 218" stroke="#A67C00" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <!-- CROWN -->
+            <rect x="200" y="148" width="124" height="28" rx="5" fill="url(#crown-g)"/>
+            <!-- Crown points -->
+            <polygon points="200,148 215,120 230,148" fill="url(#crown-g)"/>
+            <polygon points="233,148 249,110 264,148" fill="url(#crown-g)"/>
+            <polygon points="260,148 276,110 292,148" fill="url(#crown-g)"/>
+            <polygon points="294,148 310,120 324,148" fill="url(#crown-g)"/>
+            <!-- Gems -->
+            <circle cx="215" cy="134" r="5" fill="#D94F3B"/><circle cx="213" cy="132" r="2" fill="rgba(255,255,255,.5)"/>
+            <circle cx="257" cy="126" r="6" fill="#2D6A4F"/><circle cx="255" cy="124" r="2.5" fill="rgba(255,255,255,.5)"/>
+            <circle cx="283" cy="126" r="6" fill="#5B2D8E"/><circle cx="281" cy="124" r="2.5" fill="rgba(255,255,255,.5)"/>
+            <circle cx="310" cy="134" r="5" fill="#D4960F"/><circle cx="308" cy="132" r="2" fill="rgba(255,255,255,.5)"/>
+            <!-- SCROLL (foreground, rotated, 2 layers) -->
+            <g transform="rotate(-12, 360, 455)">
+              <ellipse cx="370" cy="400" rx="38" ry="8" fill="#D4BC8A"/>
+              <rect x="332" y="400" width="76" height="95" rx="6" fill="url(#scroll-g)"/>
+              <ellipse cx="370" cy="497" rx="38" ry="8" fill="#D4BC8A"/>
+              <!-- Scroll lines -->
+              <line x1="346" y1="420" x2="394" y2="420" stroke="#C4A878" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+              <line x1="346" y1="433" x2="394" y2="433" stroke="#C4A878" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+              <line x1="346" y1="446" x2="380" y2="446" stroke="#C4A878" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+              <!-- Wax seal -->
+              <circle cx="370" cy="475" r="13" fill="#D94F3B"/>
+              <circle cx="370" cy="475" r="9" fill="#A83020"/>
+              <circle cx="370" cy="475" r="3.5" fill="#2C1A0E"/>
+            </g>
+            <!-- QUILL -->
+            <g transform="rotate(20, 410, 420)">
+              <path d="M 410 380 Q 428 358 435 325 Q 438 300 430 270 Q 420 290 415 315 Q 411 340 410 380 Z" fill="#F0E8C0"/>
+              <path d="M 410 380 Q 393 358 388 325 Q 385 300 395 270 Q 402 288 406 315 Q 409 340 410 380 Z" fill="#E0D0A0" opacity=".7"/>
+              <line x1="410" y1="380" x2="405" y2="455" stroke="#4A2F1A" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M 401 449 Q 400 460 407 464 Q 409 452 401 449 Z" fill="#2C1A0E"/>
+            </g>
+            <!-- DRAGON TOY (cute, small, green) -->
+            <g class="breathe">
+              <!-- Body -->
+              <ellipse cx="135" cy="460" rx="32" ry="26" fill="#2D6A4F"/>
+              <ellipse cx="135" cy="456" rx="26" ry="20" fill="#4A9B6E" opacity=".7"/>
+              <!-- Head -->
+              <ellipse cx="161" cy="438" rx="20" ry="16" fill="#2D6A4F"/>
+              <ellipse cx="168" cy="434" rx="12" ry="9" fill="#4A9B6E" opacity=".7"/>
+              <!-- Eye -->
+              <circle cx="167" cy="432" r="5" fill="white"/>
+              <circle cx="168" cy="432" r="3" fill="#D4960F"/>
+              <circle cx="168.5" cy="431.5" r="1.5" fill="#1A0A00"/>
+              <circle cx="166" cy="430" r="1.5" fill="white"/>
+              <!-- Nostril -->
+              <circle cx="176" cy="437" r="2" fill="#1A4A2A"/>
+              <!-- Wing -->
+              <path d="M 112 442 Q 95 420 108 408 Q 122 422 118 448 Z" fill="#2D6A4F" opacity=".9"/>
+              <!-- Tail -->
+              <path d="M 104 462 Q 90 456 86 468 Q 99 472 108 465 Z" fill="#2D6A4F"/>
+              <!-- Smoke -->
+              <circle cx="184" cy="424" r="4" fill="#A0A090" opacity=".35"/>
+              <circle cx="188" cy="416" r="3" fill="#A0A090" opacity=".25"/>
+            </g>
+            <!-- CANDLE -->
+            <rect x="445" y="430" width="15" height="44" rx="3" fill="#FDF6E3"/>
+            <ellipse cx="452" cy="430" rx="7" ry="3" fill="#EDE0C4"/>
+            <!-- Flame -->
+            <ellipse cx="452" cy="422" rx="5.5" ry="9" fill="#FF9F3A"/>
+            <ellipse cx="452" cy="425" rx="3" ry="5.5" fill="#FFE080"/>
+            <!-- Candle glow -->
+            <circle cx="452" cy="432" r="70" fill="url(#candle-glow-local)"/>
+            <!-- Overall atmospheric overlays -->
+            <rect width="520" height="560" fill="url(#win-light)" opacity=".7"/>
+            <rect width="520" height="560" fill="url(#candle-lgt)"/>
+            <!-- Organic grain overlay -->
+            <rect width="520" height="560" fill="rgba(212,180,100,.04)" filter="url(#fur-tex)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2 & 3. LIE DETECTOR + CATEGORY + EXCUSE ===== -->
+<section id="generator" aria-label="Excuse Generator and Lie Detector" style="background:var(--color-secondary);padding:96px 0;position:relative;overflow:hidden">
+  <!-- Background texture -->
+  <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.02) 0,rgba(255,255,255,.02) 1px,transparent 1px,transparent 8px);pointer-events:none"></div>
+
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section header -->
+    <div class="text-center mb-14 reveal">
+      <span class="section-label" style="color:#D4960F">THE KNIGHTLY LIE DETECTOR</span>
+      <h2 class="font-display font-bold text-white mb-3" style="font-size:clamp(1.8rem,4vw,3rem)">Forge Thy Alibi</h2>
+      <p class="font-body text-white opacity-70" style="max-width:440px;margin:0 auto">Select a category, generate an excuse, and watch the detector reveal thy soul.</p>
+    </div>
+
+    <!-- Category tabs -->
+    <div role="tablist" aria-label="Excuse categories" class="flex flex-wrap justify-center gap-3 mb-10 reveal" id="cat-tabs">
+      <button class="cat-tab active" role="tab" aria-selected="true" data-cat="quest">⚔ Quest (Work)</button>
+      <button class="cat-tab" role="tab" aria-selected="false" data-cat="jousting">🐴 Jousting (Sports)</button>
+      <button class="cat-tab" role="tab" aria-selected="false" data-cat="courtlylove">💌 Courtly Love (Dating)</button>
+      <button class="cat-tab" role="tab" aria-selected="false" data-cat="dragon">🐉 Dragon (General)</button>
+      <button class="cat-tab" role="tab" aria-selected="false" data-cat="school">🏫 School</button>
+      <button class="cat-tab" role="tab" aria-selected="false" data-cat="assignments">📚 Assignments</button>
+      <button class="cat-tab" role="tab" aria-selected="false" data-cat="exams">📝 Exams</button>
+      <button class="cat-tab" role="tab" aria-selected="false" data-cat="hangout">🥤 Hangout</button>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <!-- LIE DETECTOR -->
+      <div class="reveal flex flex-col items-center">
+        <div style="width:min(380px,100%);background:#3A1D5A;border-radius:var(--radius-xl);padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.35),inset 2px 2px 4px rgba(255,255,255,.08);border:3px solid rgba(212,150,15,.25)">
+          <!-- Housing label -->
+          <div class="text-center mb-4">
+            <span class="font-display text-xs tracking-widest" style="color:#D4960F;opacity:.8">KNIGHTLY LIE DETECTOR 3000</span>
+          </div>
+          <!-- Gauge face -->
+          <div style="position:relative;width:100%;padding-bottom:60%;margin-bottom:20px">
+            <svg viewBox="0 0 320 192" style="position:absolute;inset:0;width:100%;height:100%" role="img" aria-label="Lie detector gauge">
+              <defs>
+                <filter id="led-glow"><feGaussianBlur stdDeviation="3" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+              </defs>
+              <!-- Gauge background arc zones -->
+              <!-- TRUTH zone (green, left) -->
+              <path d="M 30 180 A 130 130 0 0 1 90 62" stroke="#2D6A4F" stroke-width="28" fill="none" stroke-linecap="butt" opacity=".9"/>
+              <!-- PLAUSIBLE zone (sage) -->
+              <path d="M 90 62 A 130 130 0 0 1 160 32" stroke="#4A9B6E" stroke-width="28" fill="none" stroke-linecap="butt" opacity=".9"/>
+              <!-- STRETCHING zone (amber) -->
+              <path d="M 160 32 A 130 130 0 0 1 230 62" stroke="#D4960F" stroke-width="28" fill="none" stroke-linecap="butt" opacity=".9"/>
+              <!-- HARK A LIE zone (red) -->
+              <path d="M 230 62 A 130 130 0 0 1 290 180" stroke="#D94F3B" stroke-width="28" fill="none" stroke-linecap="butt" opacity=".9"/>
+              <!-- Zone labels -->
+              <text x="42" y="130" font-family="Nunito,sans-serif" font-size="9" fill="white" transform="rotate(-55,42,130)" opacity=".9">TRUTHFUL</text>
+              <text x="96" y="52" font-family="Nunito,sans-serif" font-size="9" fill="white" transform="rotate(-25,96,52)" opacity=".9">PLAUSIBLE</text>
+              <text x="175" y="37" font-family="Nunito,sans-serif" font-size="9" fill="white" transform="rotate(5,175,37)" opacity=".9">STRETCHING</text>
+              <text x="237" y="58" font-family="Nunito,sans-serif" font-size="9" fill="white" transform="rotate(38,237,58)" opacity=".9">HARK! A LIE</text>
+              <!-- LED ring -->
+              <g filter="url(#led-glow)">
+                <circle cx="30" cy="180" r="5" class="led" id="led-0" fill="#2D6A4F"/>
+                <circle cx="62" cy="110" r="5" class="led" id="led-1" fill="#4A9B6E"/>
+                <circle cx="108" cy="55" r="5" class="led" id="led-2" fill="#D4960F"/>
+                <circle cx="160" cy="32" r="5" class="led" id="led-3" fill="#D4960F"/>
+                <circle cx="212" cy="55" r="5" class="led" id="led-4" fill="#D4960F"/>
+                <circle cx="258" cy="110" r="5" class="led" id="led-5" fill="#D94F3B"/>
+                <circle cx="290" cy="180" r="5" class="led" id="led-6" fill="#D94F3B"/>
+              </g>
+              <!-- Center pivot -->
+              <circle cx="160" cy="180" r="14" fill="#3A2010" stroke="#D4960F" stroke-width="2"/>
+              <circle cx="160" cy="180" r="8" fill="#D4960F"/>
+              <!-- NEEDLE (animated via JS) -->
+              <g id="needle-group" style="transform-origin:160px 180px;transform:rotate(-70deg)">
+                <rect x="157.5" y="50" width="5" height="130" rx="2.5" fill="url(#needle-grad)"/>
+              </g>
+              <defs>
+                <linearGradient id="needle-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#D4960F"/>
+                  <stop offset="100%" stop-color="#8B5E10"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <!-- Verdict display -->
+          <div class="text-center" aria-live="polite" aria-atomic="true" id="verdict-display">
+            <div class="font-verdict text-5xl mb-2" id="verdict-label" style="color:#D4960F;transition:color .3s">Plausible</div>
+            <div class="font-body text-sm font-bold" style="color:rgba(255,255,255,.6)" id="knights-convinced">4 / 5 Knights Convinced</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARCHMENT EXCUSE CARD -->
+      <div class="reveal flex flex-col gap-6">
+        <div class="parchment p-8 md:p-10" style="min-height:320px;position:relative">
+          <!-- Wax seal top-right -->
+          <div style="position:absolute;top:-16px;right:24px;width:48px;height:48px;background:var(--color-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);border:3px solid #A83020" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="white"/></svg>
+          </div>
+          <!-- Category badge -->
+          <div class="flex items-center gap-3 mb-6">
+            <span class="font-body font-bold text-xs tracking-widest uppercase px-4 py-1.5 text-white rounded-full" style="background:var(--color-primary)" id="excuse-category-badge">⚔ QUEST (WORK)</span>
+          </div>
+          <!-- Excuse text -->
+          <blockquote class="font-display text-ink mb-8" style="font-size:clamp(1.1rem,2.5vw,1.5rem);line-height:1.4;min-height:100px" id="excuse-text">
+            "Hark! I beseech thee — the dragon consumed mine quarterly report. The quest continues at dawn."
+          </blockquote>
+          <!-- Action buttons -->
+          <div class="flex flex-wrap gap-3">
+            <button class="btn-primary" id="generate-btn" aria-label="Generate a new excuse">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+              Regenerate
+            </button>
+            <button class="btn-ghost" id="copy-btn" aria-label="Copy excuse to clipboard">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Excuse
+            </button>
+            <button class="btn-ghost" id="share-btn" aria-label="Share this excuse">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Share
+            </button>
+          </div>
+          <!-- Quill decoration -->
+          <div aria-hidden="true" style="position:absolute;bottom:16px;right:20px;opacity:.15">
+            <svg width="40" height="60" viewBox="0 0 40 60"><path d="M20 5 Q30 12 30 28 Q28 40 20 55 Q12 40 10 28 Q10 12 20 5 Z" fill="#2C1A0E"/><line x1="20" y1="38" x2="20" y2="58" stroke="#2C1A0E" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Custom Excuse Builder -->
+        <div class="parchment p-8">
+          <h3 class="font-display font-bold text-ink mb-1" style="font-size:1.1rem">Custom Excuse Builder</h3>
+          <p class="font-body text-ink-s text-sm mb-5">Submit thine own situation and receive a knightly verdict.</p>
+          <form id="custom-excuse-form" novalidate>
+            <div class="mb-4">
+              <label for="custom-situation" class="font-body font-bold text-xs uppercase tracking-wide text-ink-m block mb-2">Thy Situation</label>
+              <input type="text" id="custom-situation" name="situation" placeholder="e.g. I was late to a meeting" maxlength="120" class="w-full px-4 py-3 font-body text-ink bg-white border-2 rounded-2xl focus:outline-none" style="border-color:var(--color-surface-o);border-radius:var(--radius-md);font-size:1rem" required aria-required="true" aria-describedby="situation-err"/>
+              <span id="situation-err" class="font-body text-xs mt-1 hidden" style="color:var(--color-primary)" role="alert"></span>
+            </div>
+            <div class="mb-5">
+              <label for="custom-reason" class="font-body font-bold text-xs uppercase tracking-wide text-ink-m block mb-2">Thine Excuse Seed</label>
+              <input type="text" id="custom-reason" name="reason" placeholder="e.g. dragon, jousting, wizard..." maxlength="80" class="w-full px-4 py-3 font-body text-ink bg-white border-2 rounded-2xl focus:outline-none" style="border-color:var(--color-surface-o);border-radius:var(--radius-md);font-size:1rem" aria-describedby="reason-hint"/>
+              <span id="reason-hint" class="font-body text-xs mt-1 block text-ink-s">Optional — include a keyword for flavor.</span>
+            </div>
+            <button type="submit" class="btn-primary w-full justify-center" style="background:var(--color-secondary)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Submit for Verdict
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. KNIGHTS OF ALIBI ===== -->
+<section id="knights" aria-label="Knights of Alibi" style="background:var(--color-surface);padding:96px 0">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <span class="section-label">THE KNIGHTS OF ALIBI</span>
+      <h2 class="font-display font-bold text-ink mb-4" style="font-size:clamp(1.8rem,4vw,3rem)">Choose Thy Champion</h2>
+      <p class="font-body text-ink-m" style="max-width:460px;margin:0 auto;line-height:1.65">Each knight specializes in a different flavor of excuse. Click a card to hear their wisdom.</p>
+    </div>
+    <div id="knights-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 stagger-children">
+      <!-- Knight cards injected by JS -->
+    </div>
+    <div class="text-center mt-12 reveal">
+      <button class="btn-secondary" id="show-all-knights-btn">View All 18 Knights ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. TOP RATED ===== -->
+<section id="top-rated" aria-label="Top Rated Excuses" style="background:var(--color-surface-r);padding:96px 0">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="section-label">THE SCROLL OF LEGENDS</span>
+      <h2 class="font-display font-bold text-ink mb-3" style="font-size:clamp(1.8rem,4vw,2.8rem)">Top Rated Excuses</h2>
+      <p class="font-body text-ink-m">Community's finest alibis, ranked by knightly believability.</p>
+    </div>
+    <div class="flex flex-col gap-4" id="top-rated-list">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. TESTIMONIALS ===== -->
+<section id="testimonials" aria-label="Testimonials" style="background:var(--color-secondary);padding:96px 0;overflow:hidden">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="section-label" style="color:#D4960F">SCROLLS OF PRAISE</span>
+      <h2 class="font-display font-bold text-white mb-3" style="font-size:clamp(1.8rem,4vw,2.8rem)">What The People Say</h2>
+    </div>
+    <!-- Carousel -->
+    <div style="position:relative;overflow:hidden;border-radius:var(--radius-xl)" id="carousel-wrap" aria-roledescription="carousel" aria-label="Testimonial carousel">
+      <div class="carousel-track" id="carousel-track" aria-live="polite">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+    <!-- Dots -->
+    <div class="flex justify-center gap-2 mt-8" id="carousel-dots" role="tablist" aria-label="Testimonial navigation"></div>
+    <!-- Arrows -->
+    <div class="flex justify-center gap-4 mt-5">
+      <button class="btn-secondary" id="prev-btn" style="color:white;border-color:rgba(255,255,255,.4);padding:10px 20px" aria-label="Previous testimonial">← Prev</button>
+      <button class="btn-secondary" id="next-btn" style="color:white;border-color:rgba(255,255,255,.4);padding:10px 20px" aria-label="Next testimonial">Next →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. FAQ ===== -->
+<section id="faq" aria-label="Frequently Asked Questions" style="background:var(--color-surface);padding:96px 0">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="section-label">FREQUENTLY ASKED QUERIES</span>
+      <h2 class="font-display font-bold text-ink mb-3" style="font-size:clamp(1.8rem,4vw,2.8rem)">Hark — Good Questions</h2>
+    </div>
+    <div id="faq-list" class="parchment p-8 md:p-12 reveal">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:var(--color-ink);color:var(--color-surface-r);padding:64px 24px 32px" role="contentinfo">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <svg width="32" height="32" viewBox="0 0 36 36" aria-hidden="true">
+            <circle cx="18" cy="18" r="17" fill="#D94F3B"/>
+            <ellipse cx="18" cy="22" rx="7" ry="6" fill="#FDF6E3"/>
+            <circle cx="13" cy="16.5" r="2.5" fill="#FDF6E3"/>
+            <circle cx="18" cy="14.5" r="2.5" fill="#FDF6E3"/>
+            <circle cx="23" cy="16.5" r="2.5" fill="#FDF6E3"/>
+            <path d="M12 13 L14 8 L18 11 L22 8 L24 13 Z" fill="#D4960F"/>
+          </svg>
+          <span class="font-display font-bold text-surface text-lg">Excuse Generator <span style="color:#D4960F">3000</span></span>
+        </div>
+        <p class="font-body text-sm opacity-60 leading-relaxed">"Hark! A lie of noble proportion."</p>
+        <p class="font-body text-xs opacity-40 mt-4 leading-relaxed">Château Barkalot · Est. 1342</p>
+      </div>
+      <div>
+        <h3 class="font-display font-bold text-surface text-sm mb-4 tracking-wide">The Archives</h3>
+        <ul class="space-y-2 list-none">
+          <li><a href="#generator" class="font-body text-sm opacity-60 hover:opacity-100 transition-opacity no-underline" style="color:inherit">Excuse Generator</a></li>
+          <li><a href="#knights" class="font-body text-sm opacity-60 hover:opacity-100 transition-opacity no-underline" style="color:inherit">Knights of Alibi</a></li>
+          <li><a href="#top-rated" class="font-body text-sm opacity-60 hover:opacity-100 transition-opacity no-underline" style="color:inherit">Top Rated Scrolls</a></li>
+          <li><a href="#faq" class="font-body text-sm opacity-60 hover:opacity-100 transition-opacity no-underline" style="color:inherit">Royal FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display font-bold text-surface text-sm mb-4 tracking-wide">Fine Print</h3>
+        <p class="font-body text-xs opacity-50 leading-relaxed">For entertainment purposes only. We are not responsible for jousting-related absences, dragon-related property damage, or any squire who overslept.</p>
+        <p class="font-body text-xs opacity-40 mt-3">All excuses are fictional. Any resemblance to actual dragons is purely coincidental.</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(253,246,227,.1);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
+      <p class="font-body text-xs opacity-40">© 1342 Château Barkalot. Hand-pressed onto digital parchment.</p>
+      <p class="font-body text-xs opacity-40">Made with ⚔ and a lot of excuses.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- KNIGHT MODAL -->
+<div id="knight-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name" tabindex="-1">
+  <div id="knight-modal" style="padding:0;overflow:hidden">
+    <div id="modal-portrait" style="height:220px;background:linear-gradient(135deg,#D4960F,#D94F3B);position:relative">
+      <button id="modal-close" aria-label="Close knight details" style="position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.4);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;backdrop-filter:blur(4px)">✕</button>
+      <div id="modal-initial" class="font-display font-black text-white" style="position:absolute;bottom:20px;left:28px;font-size:4rem;opacity:.25"></div>
+    </div>
+    <div style="padding:28px 28px 32px">
+      <div class="flex items-start justify-between gap-4 mb-2">
+        <h2 id="modal-name" class="font-display font-bold text-ink" style="font-size:1.6rem"></h2>
+        <span id="modal-role" class="font-body font-bold text-xs uppercase tracking-wider px-3 py-1 rounded-full text-white" style="background:var(--color-primary);white-space:nowrap;flex-shrink:0"></span>
+      </div>
+      <p id="modal-breed" class="font-body italic text-ink-s text-sm mb-4"></p>
+      <p id="modal-tagline" class="font-body text-ink mb-5" style="line-height:1.6"></p>
+      <div style="background:var(--color-surface-r);border-radius:var(--radius-md);padding:16px 20px;border-left:3px solid var(--color-accent)">
+        <p class="font-body text-xs font-bold text-ink-s uppercase tracking-wide mb-2">Sample Excuse</p>
+        <p id="modal-excuse" class="font-display text-ink" style="font-size:.95rem;line-height:1.5"></p>
+      </div>
+      <div class="flex gap-3 mt-6">
+        <button class="btn-primary" id="modal-use-excuse" style="flex:1;justify-content:center">Use This Excuse</button>
+        <button class="btn-ghost" id="modal-close-2">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// ============================================================
+// EXCUSE DATABASE
+// ============================================================
+const EXCUSES = {
+  quest: [
+    { text: "Mine Slack notifications staged a full coup. The realm of Deep Work hath fallen. I tried.", rating: 3 },
+    { text: "An impromptu all-hands was summoned. It consumed the entire morning. No survivors.", rating: 3 },
+    { text: "A rival knight hacked mine Wi-Fi using dark sorcery. The VPN is also cursed, verily.", rating: 2 },
+    { text: "Mine stand-up ran three hours. Three whole hours. The dragon would have been faster.", rating: 3 },
+    { text: "The King's Teams app suffered a catastrophic outage. Communication: nil. Realm: chaos.", rating: 4 },
+    { text: "I was jousting with mine inbox — 847 unread messages. It unseated me in round one.", rating: 3 },
+    { text: "Alas — a wizard triple-booked mine calendar and I could not escape the first meeting.", rating: 2 },
+    { text: "The King summoned me to an emergency roundtable that was neither brief nor round.", rating: 4 },
+  ],
+  jousting: [
+    { text: "I was jousting. Mine hamstring hath filed a formal grievance. Talks are ongoing.", rating: 3 },
+    { text: "Mine horse quit mid-game citing work-life balance concerns. I could not argue with that.", rating: 3 },
+    { text: "Mine AirPods died at the pivotal moment. One cannot train without the sacred playlist.", rating: 4 },
+    { text: "A dragon invaded the pitch at halftime. We paused for safety. Also for content creation.", rating: 2 },
+    { text: "Mine protein shake exploded upon mine training gear. The quest for gains continues tomorrow.", rating: 4 },
+    { text: "Mine fitness app crashed mid-session and lost all data. The reps never happened. Gone.", rating: 3 },
+    { text: "Mine gym companion cancelled at the final possible moment. One cannot joust alone with honour.", rating: 3 },
+    { text: "The royal physician confirmed I must not gallop for a fortnight. It is on the note.", rating: 4 },
+  ],
+  courtlylove: [
+    { text: "Mine phone died at 12% and the charging squire was unavailable. I was navigationally lost.", rating: 3 },
+    { text: "I spent forty-seven minutes selecting the correct opening message. The stakes were immense.", rating: 2 },
+    { text: "The restaurant app lied about the wait time. The app always lies. This is known.", rating: 4 },
+    { text: "I summoned a carriage (Uber) but the driver took the scenic route through seven kingdoms.", rating: 3 },
+    { text: "Mine situationship texted at the worst possible moment. I required time to process this.", rating: 2 },
+    { text: "I was composing a reply for forty-seven minutes. The courage arrived, alas, too late.", rating: 1 },
+    { text: "Verily, thy location pin was in the wrong kingdom entirely. This error is thine, not mine.", rating: 3 },
+    { text: "Thy radiant profile photo caused a moment of stunned silence. I recovered. Eventually.", rating: 2 },
+  ],
+  dragon: [
+    { text: "The dragon ate mine quest. And mine keys. And mine will to explain further, alas.", rating: 2 },
+    { text: "I overslept due to a sleep cycle irregularity of considerable medical complexity. Hark.", rating: 2 },
+    { text: "A wizard made me late. I cannot prove this. Neither can anyone disprove it. Such is sorcery.", rating: 2 },
+    { text: "Mine Deliveroo rider entered the Enchanted Forest and hath not returned. I waited bravely.", rating: 3 },
+    { text: "The village oracle (Google Maps) added 45 minutes of scenic detour to mine journey.", rating: 2 },
+    { text: "I was evacuating due to an unscheduled emotional dragon. Safety must always come first.", rating: 3 },
+    { text: "Mine alarm clocks — all four of them — were silenced by forces I dare not name.", rating: 1 },
+    { text: "The Black Knight (mine landlord) required a word. Just one word. Forty minutes later...", rating: 3 },
+  ],
+  school: [
+    { text: "Mine carriage (the bus) departed without mine person aboard. The driver showed zero mercy.", rating: 3 },
+    { text: "A rogue notification storm besieged mine phone and I could not look away in good conscience.", rating: 2 },
+    { text: "The school gates were guarded by a traffic dragon of considerable girth and stubbornness.", rating: 3 },
+    { text: "Mine locker combination hath been cursed by a jealous sorcerer. I stand here, lockless.", rating: 2 },
+    { text: "I was ambushed by a lengthy discourse from the guidance counsellor. I could not flee politely.", rating: 4 },
+    { text: "Mine uniform was seized by a laundry goblin. I appear in substitute attire. Apologies.", rating: 3 },
+    { text: "The hallway was so densely populated with knights that passage required seventeen minutes.", rating: 4 },
+    { text: "I stopped to assist a younger squire with their schedule. Nobility consumed my punctuality.", rating: 4 },
+  ],
+  assignments: [
+    { text: "The dragon consumed mine homework. I watched helplessly. The cat was also a witness.", rating: 2 },
+    { text: "Mine laptop fell into an enchanted sleep and could not be roused by mortal means or charging.", rating: 3 },
+    { text: "The Wi-Fi in mine study chamber vanished at the precise moment inspiration finally struck.", rating: 3 },
+    { text: "I completed the assignment but mine printer hath refused all cooperation since the lunar eclipse.", rating: 4 },
+    { text: "A catastrophic charger failure claimed mine device at 11% battery. The maths was cruel.", rating: 3 },
+    { text: "I misread the due date. The scroll said Thursday but mine eyes most clearly beheld Friday.", rating: 2 },
+    { text: "Mine notes app was possessed by a glitch demon. Six hours of study, simply gone. Vanished.", rating: 2 },
+    { text: "I began the quest at midnight, bravely. The quest was longer than the stars had foretold.", rating: 3 },
+  ],
+  exams: [
+    { text: "Mine revision notes were consumed by a force I can only describe as Netflix the Enchanter.", rating: 1 },
+    { text: "I studied the wrong scroll. The material covered was adjacent to, but not within, the exam.", rating: 2 },
+    { text: "Mine alarm summoned me at 7am but mine body refused to answer. Negotiations collapsed.", rating: 2 },
+    { text: "The examination hall was guarded by a proctor of terrifying aspect. I briefly reconsidered life.", rating: 4 },
+    { text: "I blanked on the entire scroll the moment the quill touched parchment. The classic curse.", rating: 3 },
+    { text: "Mine study companion cancelled, citing a dragon. I faced the tome alone and entirely unprepared.", rating: 3 },
+    { text: "I pulled an all-night vigil of study. The knowledge entered mine head and departed by morning.", rating: 2 },
+    { text: "The syllabus mentioned Chapter 7. Mine professor had secretly added Chapters 8 through 14.", rating: 3 },
+  ],
+  hangout: [
+    { text: "Mine phone died and I was navigationally stranded in an unfamiliar quarter of the realm.", rating: 3 },
+    { text: "I was ambushed by a parent requiring a Full Conversation. I could not escape politely.", rating: 4 },
+    { text: "Mine outfit required seventeen iterations before achieving acceptable knightly standard.", rating: 2 },
+    { text: "I was almost out the door when mine stomach staged a protest of considerable urgency.", rating: 3 },
+    { text: "Traffic was a dragon. A large, slow, entirely unmoving dragon on the main thoroughfare.", rating: 3 },
+    { text: "Mine sibling required emergency assistance. As a noble knight, I could not in conscience deny.", rating: 4 },
+    { text: "I fell into a doom-scroll vortex of dangerous depth and did not surface until too late.", rating: 2 },
+    { text: "The group chat said 7pm. Then 7:30. I have been ready and waiting since 6:45. Verily.", rating: 4 },
+  ],
+};
+
+const VERDICTS = [
+  null,
+  { label: "EXCOMMUNICADO", color: "#8B0000", angle: -200, knights: "0 / 5 Knights", bg: "#5A0000" },
+  { label: "Hark! A Lie!", color: "#D94F3B", angle: 55, knights: "1 / 5 Knights", bg: "#A83020" },
+  { label: "Stretching It", color: "#D4960F", angle: 20, knights: "3 / 5 Knights", bg: "#8B6000" },
+  { label: "Plausible", color: "#4A9B6E", angle: -25, knights: "4 / 5 Knights", bg: "#1E5C3A" },
+  { label: "Truthful", color: "#2D6A4F", angle: -65, knights: "5 / 5 Knights", bg: "#1A4A2A" },
+];
+
+const KNIGHTS = [
+  { name:"King Arthur", breed:"Golden Retriever", role:"KING", c1:"#F5C56C", c2:"#D4960F", badge:"#D4960F", tagline:"A king must always protect thy meeting agenda.", category:"Quest (Work)", excuse:"The dragon consumed mine quarterly report. The quest continues at dawn." },
+  { name:"Sir Lancelot", breed:"Doberman Pinscher", role:"GREATEST WARRIOR", c1:"#7340A8", c2:"#4A1D7A", badge:"#5B2D8E", tagline:"I was thy greatest warrior. The gym can wait.", category:"Jousting (Sports)", excuse:"I was engaged in a jousting tournament of considerable length and national importance." },
+  { name:"Sir Galahad", breed:"Cavalier King Charles Spaniel", role:"PURE KNIGHT", c1:"#F0C44A", c2:"#B8790A", badge:"#B8790A", tagline:"Purity of heart demands that punctuality be flexible.", category:"Quest (Work)", excuse:"Mine purity of heart required extended morning prayer and purification rites." },
+  { name:"Sir Gawain", breed:"German Shepherd", role:"LOYAL KNIGHT", c1:"#4A9B6E", c2:"#1E5C3A", badge:"#2D6A4F", tagline:"Loyalty to my nap came first, my liege.", category:"Dragon (General)", excuse:"I was sworn to protect the castle gates. The gates required more protection than foreseen." },
+  { name:"Sir Percival", breed:"Irish Wolfhound", role:"GRAIL SEEKER", c1:"#7A9FD4", c2:"#3A5F8A", badge:"#3A5F8A", tagline:"Verily, I sought the Grail. Traffic was the dragon.", category:"Dragon (General)", excuse:"I have been on a sacred quest. The Grail was just around the corner. Verily, I believed it." },
+  { name:"Sir Tristan", breed:"Bloodhound", role:"ROMANTIC KNIGHT", c1:"#C9785A", c2:"#8B4A30", badge:"#D94F3B", tagline:"Love made me late. Alas, it always does.", category:"Courtly Love (Dating)", excuse:"Love detained me and I cannot apologize for that which lies beyond mortal reckoning." },
+  { name:"Sir Bedivere", breed:"Old English Sheepdog", role:"FAITHFUL KNIGHT", c1:"#C0B8D0", c2:"#7A6090", badge:"#5B2D8E", tagline:"I was returning Excalibur. The lake is quite far.", category:"Quest (Work)", excuse:"I was completing a sacred errand of utmost national importance that cannot be discussed." },
+  { name:"Sir Kay", breed:"Pug", role:"ROYAL STEWARD", c1:"#D4A88A", c2:"#8B6347", badge:"#8B6347", tagline:"Hark! The dragon ate my to-do list.", category:"Dragon (General)", excuse:"The dragon consumed mine to-do list. I have been improvising heroically ever since." },
+  { name:"Sir Bors", breed:"Boxer", role:"GRAIL ACHIEVER", c1:"#D4724A", c2:"#8B3A20", badge:"#D94F3B", tagline:"A Grail achiever needs rest days, squire.", category:"Jousting (Sports)", excuse:"I achieved the Holy Grail last Tuesday. Rest is medically mandatory after such feats." },
+  { name:"Sir Mordred", breed:"Siberian Husky", role:"TRAITOR", c1:"#8090A8", c2:"#404858", badge:"#404858", tagline:"My plan was noble. The execution, less so.", category:"Dragon (General)", excuse:"I was the victim of a conspiracy. Mine enemies conspired specifically to make me late." },
+  { name:"Sir Gareth", breed:"Beagle", role:"HUMBLE KNIGHT", c1:"#D4B07A", c2:"#8B7040", badge:"#8B7040", tagline:"Humble knights still deserve a long lunch.", category:"Quest (Work)", excuse:"I am but a humble knight. The humble path through the forest is also the longest." },
+  { name:"Sir Agravain", breed:"Rottweiler", role:"INQUISITOR", c1:"#6A4A3A", c2:"#3A2020", badge:"#2C1A0E", tagline:"I was exposing dishonesty. At the pub.", category:"Courtly Love (Dating)", excuse:"I was conducting a thorough investigation into the matter. At considerable length. With tankards." },
+  { name:"Sir Gaheris", breed:"Border Collie", role:"NOBLE KNIGHT", c1:"#5A8A5A", c2:"#2A5A2A", badge:"#2D6A4F", tagline:"My brother needed me. All fourteen of him.", category:"Dragon (General)", excuse:"Mine brother required assistance. The specifics are a family matter of great sensitivity." },
+  { name:"Sir Palamedes", breed:"Saluki", role:"SARACEN KNIGHT", c1:"#C4A87A", c2:"#8A7040", badge:"#8A7040", tagline:"The Saracen knight arrives fashionably late, always.", category:"Courtly Love (Dating)", excuse:"In mine culture, punctuality is measured by the position of the sun, not the clock tower." },
+  { name:"Sir Ector", breed:"Bulldog", role:"FOSTER FATHER", c1:"#B8A090", c2:"#7A6050", badge:"#7A6050", tagline:"A foster father's wisdom: never rush a nap.", category:"Quest (Work)", excuse:"Mine foster son Arthur needed paternal guidance. This customarily takes a fortnight minimum." },
+  { name:"Sir Lamorak", breed:"Great Dane", role:"STRONGEST KNIGHT", c1:"#9090C0", c2:"#505080", badge:"#5B2D8E", tagline:"One of the strongest knights... also the sleepiest.", category:"Jousting (Sports)", excuse:"Mine extraordinary strength requires proportionally extraordinary rest periods. It is a burden." },
+  { name:"Merlin", breed:"Dachshund (Magical)", role:"THE WIZARD", c1:"#9A50C8", c2:"#5B2D8E", badge:"#5B2D8E", tagline:"I turned thy excuse into magic. Verily.", category:"Dragon (General)", excuse:"Time passes differently in the enchanted realm. I was absent for what felt like moments." },
+  { name:"Lady Guinevere", breed:"Cocker Spaniel", role:"QUEEN", c1:"#D4C0E0", c2:"#9A7AB0", badge:"#5B2D8E", tagline:"A queen's schedule is... diplomatically fluid.", category:"Courtly Love (Dating)", excuse:"Mine schedule is diplomatically fluid and subject to royal prerogative. Thou understandest." },
+];
+
+const TESTIMONIALS = [
+  { quote: "This lie got me out of a meeting! 'The dragon ate my agenda' actually worked on my boss.", handle: "@SirOfficeKnight", stars: 5 },
+  { quote: "Told my date I was jousting. She believed me. We're engaged. The Knightly Lie Detector rated it 'Plausible.'", handle: "@LancelotLover", stars: 5 },
+  { quote: "Used 'my squire overslept' for a gym cancellation. My trainer asked zero follow-up questions.", handle: "@FitKnight99", stars: 4 },
+  { quote: "The Lie Detector said EXCOMMUNICADO but I used it anyway. My boss laughed so hard he forgot I was late.", handle: "@BoldAndBrazen", stars: 3 },
+  { quote: "Hark! Even my boss said 'the dragon ate your report' was creative enough to forgive the deadline.", handle: "@CorpMedieval", stars: 5 },
+];
+
+const TOP_EXCUSES = [
+  { rank:1, text:"The dragon ate mine quest. And mine keys. And mine will to explain further.", cat:"🐉 Dragon", stars:5, uses:"2.3k", rating:2 },
+  { rank:2, text:"I was jousting. Mine hamstring hath protested with great and theatrical drama.", cat:"🐴 Jousting", stars:5, uses:"1.8k", rating:3 },
+  { rank:3, text:"My squire overslept and took the meeting notes with him. Into the forest.", cat:"⚔ Quest", stars:4, uses:"1.2k", rating:4 },
+  { rank:4, text:"A wizard made me late. I cannot prove this. I also cannot disprove it.", cat:"🐉 Dragon", stars:4, uses:"987", rating:2 },
+  { rank:5, text:"Verily, I sought the Grail. Traffic was the dragon.", cat:"⚔ Quest", stars:3, uses:"743", rating:3 },
+];
+
+const FAQ_ITEMS = [
+  { q:"Is this legally binding?", a:"Hark, no. These excuses are for entertainment only. We are not barristers. We are knights." },
+  { q:"Can I use these for real?", a:"Thou canst try. We accept zero responsibility for jousting-related absences, dragon-related property damage, or romantic adventures gone awry." },
+  { q:"Who built this?", a:"The finest squires in the digital realm, commissioned by the Chief Creative Director of Château Barkalot. A tale for another scroll." },
+  { q:"Why is everything medieval?", a:"Because 'the server was down' has never — not once — sounded as noble as 'the dragon ate my quest.'" },
+  { q:"What is the Knightly Lie Detector?", a:"A whimsical instrument of truth, forged in the fires of Camelot and powered by vibes, dark sorcery, and a little bit of randomness." },
+  { q:"Can I submit my own excuse?", a:"Verily. Use the Custom Excuse Builder above. Our knights will rate thy alibi's believability with great ceremony." },
+  { q:"What does EXCOMMUNICADO mean?", a:"Thy excuse was so catastrophically implausible that even the dragon is embarrassed for thee. Start over. We believe in thee." },
+];
+
+// ============================================================
+// STATE
+// ============================================================
+let currentCat = 'quest';
+let currentExcuseIndex = 0;
+let carouselIndex = 0;
+let carouselTimer = null;
+let showAllKnights = false;
+
+// ============================================================
+// REDUCED MOTION
+// ============================================================
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ============================================================
+// HERO HEADLINE WORD STAGGER
+// ============================================================
+function initHero() {
+  const el = document.getElementById('hero-headline');
+  const words = ['Excuse', 'Generator', '3000'];
+  el.innerHTML = words.map((w, i) => {
+    const delay = prefersReduced ? 0 : i * 120;
+    return `<span class="hero-word" style="display:inline-block;opacity:0;transform:translateY(24px);animation:hero-word var(--dur-hero) var(--ease-enter) ${delay}ms forwards;margin-right:0.25em">${w}</span>`;
+  }).join('') + '<span class="sr-only">.</span>';
+
+  // Sparkles
+  const field = document.getElementById('sparkle-field');
+  if (!prefersReduced && field) {
+    for (let i = 0; i < 18; i++) {
+      const s = document.createElement('div');
+      s.className = 'sparkle';
+      const size = 6 + Math.random() * 10;
+      const delay = Math.random() * 3;
+      const dur = 1.5 + Math.random() * 2;
+      const x = 10 + Math.random() * 80;
+      const y = 5 + Math.random() * 90;
+      const colors = ['#D4960F','#D94F3B','#5B2D8E','#2D6A4F'];
+      const color = colors[Math.floor(Math.random()*colors.length)];
+      s.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>`;
+      s.style.cssText = `left:${x}%;top:${y}%;animation-delay:${delay}s;animation-duration:${dur}s`;
+      field.appendChild(s);
+    }
+  }
+}
+
+// ============================================================
+// SCROLL REVEAL
+// ============================================================
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ============================================================
+// EXCUSE GENERATOR
+// ============================================================
+function getExcuse(cat) {
+  const list = EXCUSES[cat] || EXCUSES.quest;
+  const idx = Math.floor(Math.random() * list.length);
+  return list[idx];
+}
+
+function updateLieDetector(rating) {
+  const v = VERDICTS[rating];
+  if (!v) return;
+  const needle = document.getElementById('needle-group');
+  const label = document.getElementById('verdict-label');
+  const convinced = document.getElementById('knights-convinced');
+  if (needle) {
+    needle.style.transition = prefersReduced
+      ? 'transform 200ms'
+      : 'transform 600ms cubic-bezier(.34,1.56,.64,1)';
+    needle.style.transform = `rotate(${v.angle}deg)`;
+  }
+  if (label) {
+    label.textContent = v.label;
+    label.style.color = v.color;
+  }
+  if (convinced) convinced.textContent = v.knights + ' Convinced';
+  // Animate LEDs
+  document.querySelectorAll('.led').forEach((led, i) => {
+    setTimeout(() => {
+      led.classList.add('active');
+      setTimeout(() => led.classList.remove('active'), 450);
+    }, i * 150);
+  });
+}
+
+function displayExcuse(excuse, cat) {
+  const textEl = document.getElementById('excuse-text');
+  const badgeEl = document.getElementById('excuse-category-badge');
+  const catNames = {
+    quest: '⚔ QUEST (WORK)',
+    jousting: '🐴 JOUSTING (SPORTS)',
+    courtlylove: '💌 COURTLY LOVE (DATING)',
+    dragon: '🐉 DRAGON (GENERAL)',
+  };
+  if (textEl) {
+    textEl.style.opacity = '0';
+    textEl.style.transform = 'translateY(8px)';
+    setTimeout(() => {
+      textEl.textContent = `"${excuse.text}"`;
+      textEl.style.transition = 'opacity 200ms, transform 200ms var(--ease-enter)';
+      textEl.style.opacity = '1';
+      textEl.style.transform = 'none';
+    }, 200);
+  }
+  if (badgeEl) badgeEl.textContent = catNames[cat] || catNames.quest;
+  updateLieDetector(excuse.rating);
+}
+
+function initExcuseGenerator() {
+  const tabs = document.querySelectorAll('.cat-tab');
+  const genBtn = document.getElementById('generate-btn');
+
+  // Display initial excuse
+  displayExcuse(getExcuse(currentCat), currentCat);
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      currentCat = tab.dataset.cat;
+      const excuse = getExcuse(currentCat);
+      displayExcuse(excuse, currentCat);
+    });
+  });
+
+  if (genBtn) {
+    genBtn.addEventListener('click', () => {
+      if (!prefersReduced) {
+        genBtn.style.animation = 'none';
+        genBtn.offsetHeight; // reflow
+        genBtn.style.animation = 'bounce-generate 600ms var(--ease-spring)';
+      }
+      const excuse = getExcuse(currentCat);
+      displayExcuse(excuse, currentCat);
+    });
+  }
+
+  // Copy
+  document.getElementById('copy-btn')?.addEventListener('click', () => {
+    const text = document.getElementById('excuse-text')?.textContent || '';
+    navigator.clipboard.writeText(text).then(() => showToast('Excuse copied to thy clipboard. Use wisely.', 'success'));
+  });
+
+  // Share
+  document.getElementById('share-btn')?.addEventListener('click', () => {
+    const text = document.getElementById('excuse-text')?.textContent || '';
+    if (navigator.share) {
+      navigator.share({ title: 'Excuse Generator 3000', text, url: location.href });
+    } else {
+      navigator.clipboard.writeText(text).then(() => showToast('Shared! May thy alibi find noble ears.', 'info'));
+    }
+  });
+
+  // Custom form
+  const form = document.getElementById('custom-excuse-form');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const sitEl = document.getElementById('custom-situation');
+    const errEl = document.getElementById('situation-err');
+    if (!sitEl?.value.trim()) {
+      errEl.textContent = 'Prithee — describe thy situation first.';
+      errEl.classList.remove('hidden');
+      sitEl?.focus();
+      return;
+    }
+    errEl.classList.add('hidden');
+    const keywords = (document.getElementById('custom-reason')?.value || '').toLowerCase();
+    let cat = 'dragon';
+    if (keywords.includes('work') || keywords.includes('meeting') || keywords.includes('boss')) cat = 'quest';
+    else if (keywords.includes('gym') || keywords.includes('sport') || keywords.includes('joust')) cat = 'jousting';
+    else if (keywords.includes('date') || keywords.includes('love') || keywords.includes('romance')) cat = 'courtlylove';
+    const excuse = getExcuse(cat);
+    displayExcuse(excuse, cat);
+    document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    showToast('Thy plea hath been received, noble visitor.', 'success');
+    form.reset();
+  });
+}
+
+// ============================================================
+// KNIGHTS GRID
+// ============================================================
+function buildKnightsGrid() {
+  const grid = document.getElementById('knights-grid');
+  if (!grid) return;
+  const visible = showAllKnights ? KNIGHTS : KNIGHTS.slice(0, 6);
+  grid.innerHTML = visible.map((k, i) => `
+    <div class="card-clay reveal cursor-pointer knight-card" data-index="${KNIGHTS.indexOf(k)}" tabindex="0" role="button" aria-label="View details for ${k.name}, ${k.breed}" style="padding:0;overflow:hidden">
+      <div class="knight-portrait" style="background:linear-gradient(135deg,${k.c1},${k.c2})">
+        <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.2rem;opacity:.3;font-family:var(--font-display)">${k.name[0]}</span>
+        <span class="breed-label">${k.breed}</span>
+        <span style="position:absolute;top:10px;left:10px;background:${k.badge};color:white;padding:3px 10px;border-radius:9999px;font-size:.55rem;font-weight:800;letter-spacing:.1em;font-family:var(--font-body);white-space:nowrap;max-width:calc(100% - 20px);overflow:hidden;text-overflow:ellipsis">${k.role}</span>
+      </div>
+      <div style="padding:14px 14px 16px">
+        <h3 class="font-display font-bold text-ink mb-1" style="font-size:.95rem">${k.name}</h3>
+        <p class="font-body text-ink-s" style="font-size:.72rem;line-height:1.5">${k.tagline}</p>
+      </div>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('.knight-card').forEach(card => {
+    const open = () => openKnightModal(parseInt(card.dataset.index));
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', (e) => { if (e.key==='Enter'||e.key===' ') { e.preventDefault(); open(); } });
+  });
+  initScrollReveal();
+}
+
+function openKnightModal(idx) {
+  const k = KNIGHTS[idx];
+  if (!k) return;
+  const overlay = document.getElementById('knight-modal-overlay');
+  document.getElementById('modal-portrait').style.background = `linear-gradient(135deg,${k.c1},${k.c2})`;
+  document.getElementById('modal-initial').textContent = k.name[0];
+  document.getElementById('modal-name').textContent = k.name;
+  document.getElementById('modal-role').textContent = k.role;
+  document.getElementById('modal-role').style.background = k.badge;
+  document.getElementById('modal-breed').textContent = k.breed + ' · Specialty: ' + k.category;
+  document.getElementById('modal-tagline').textContent = `"${k.tagline}"`;
+  document.getElementById('modal-excuse').textContent = `"${k.excuse}"`;
+  document.getElementById('modal-use-excuse').onclick = () => {
+    const excuse = { text: k.excuse, rating: 3 };
+    displayExcuse(excuse, 'quest');
+    closeKnightModal();
+    document.getElementById('generator')?.scrollIntoView({ behavior:'smooth', block:'center' });
+    showToast(`${k.name} hath bestowed thee their excuse. Use it wisely.`, 'info');
+  };
+  overlay.classList.add('open');
+  overlay.focus();
+  document.body.style.overflow = 'hidden';
+}
+
+function closeKnightModal() {
+  document.getElementById('knight-modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function initKnights() {
+  buildKnightsGrid();
+  document.getElementById('show-all-knights-btn')?.addEventListener('click', () => {
+    showAllKnights = !showAllKnights;
+    buildKnightsGrid();
+    document.getElementById('show-all-knights-btn').textContent = showAllKnights ? 'Show Fewer Knights ↑' : 'View All 18 Knights ↓';
+  });
+  const overlay = document.getElementById('knight-modal-overlay');
+  overlay?.addEventListener('click', (e) => { if (e.target === overlay) closeKnightModal(); });
+  document.getElementById('modal-close')?.addEventListener('click', closeKnightModal);
+  document.getElementById('modal-close-2')?.addEventListener('click', closeKnightModal);
+  document.addEventListener('keydown', (e) => { if (e.key==='Escape') closeKnightModal(); });
+}
+
+// ============================================================
+// TOP RATED
+// ============================================================
+function initTopRated() {
+  const list = document.getElementById('top-rated-list');
+  if (!list) return;
+  list.innerHTML = TOP_EXCUSES.map(e => `
+    <div class="top-row reveal">
+      <div style="flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--color-accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:900;font-size:1rem;color:var(--color-ink)">${e.rank}</div>
+      <div style="flex:1;min-width:0">
+        <p class="font-body text-ink mb-1" style="font-size:.95rem;line-height:1.45">"${e.text}"</p>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-body text-xs font-bold px-2 py-0.5 rounded-full" style="background:var(--color-surface-o);color:var(--color-ink-m)">${e.cat}</span>
+          <span class="font-body text-xs text-ink-s">${'⭐'.repeat(e.stars)} · ${e.uses} uses</span>
+        </div>
+      </div>
+      <button class="btn-ghost" style="flex-shrink:0;padding:8px 16px;font-size:.8rem" onclick="useTopExcuse(${e.rank-1})" aria-label="Use excuse: ${e.text}">Use</button>
+    </div>
+  `).join('');
+}
+
+window.useTopExcuse = function(idx) {
+  const e = TOP_EXCUSES[idx];
+  if (!e) return;
+  const excuse = { text: e.text, rating: e.rating };
+  const catMap = { '⚔ Quest':'quest','🐴 Jousting':'jousting','💌 Courtly Love':'courtlylove','🐉 Dragon':'dragon' };
+  const cat = Object.entries(catMap).find(([k]) => e.cat.includes(k.split(' ')[1]))?.[1] || 'quest';
+  displayExcuse(excuse, cat);
+  document.getElementById('generator')?.scrollIntoView({ behavior:'smooth', block:'center' });
+  showToast('Excuse loaded from the Scroll of Legends!', 'success');
+};
+
+// ============================================================
+// TESTIMONIALS CAROUSEL
+// ============================================================
+function initCarousel() {
+  const track = document.getElementById('carousel-track');
+  const dotsContainer = document.getElementById('carousel-dots');
+  if (!track || !dotsContainer) return;
+
+  track.innerHTML = TESTIMONIALS.map((t, i) => `
+    <div style="flex:0 0 100%;padding:0 4px" role="tabpanel" aria-label="Testimonial ${i+1} of ${TESTIMONIALS.length}">
+      <div class="parchment" style="padding:36px 40px;background:var(--color-surface)">
+        <div style="display:flex;gap:4px;margin-bottom:16px" aria-label="${t.stars} stars">${'⭐'.repeat(t.stars)}</div>
+        <blockquote class="font-body text-ink mb-5" style="font-size:1.1rem;line-height:1.65;font-style:italic">"${t.quote}"</blockquote>
+        <div class="font-body font-bold text-ink-s text-sm">${t.handle}</div>
+      </div>
+    </div>
+  `).join('');
+
+  dotsContainer.innerHTML = TESTIMONIALS.map((_, i) => `
+    <button class="carousel-dot ${i===0?'active':''}" role="tab" aria-label="Go to testimonial ${i+1}" aria-selected="${i===0}" data-idx="${i}"></button>
+  `).join('');
+
+  function goTo(idx) {
+    carouselIndex = (idx + TESTIMONIALS.length) % TESTIMONIALS.length;
+    track.style.transform = `translateX(-${carouselIndex * 100}%)`;
+    document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === carouselIndex);
+      d.setAttribute('aria-selected', i === carouselIndex);
+    });
+  }
+
+  document.getElementById('prev-btn')?.addEventListener('click', () => goTo(carouselIndex - 1));
+  document.getElementById('next-btn')?.addEventListener('click', () => goTo(carouselIndex + 1));
+  dotsContainer.querySelectorAll('.carousel-dot').forEach(d => {
+    d.addEventListener('click', () => goTo(parseInt(d.dataset.idx)));
+  });
+
+  const wrap = document.getElementById('carousel-wrap');
+  if (!prefersReduced) {
+    carouselTimer = setInterval(() => goTo(carouselIndex + 1), 5000);
+    wrap?.addEventListener('mouseenter', () => clearInterval(carouselTimer));
+    wrap?.addEventListener('mouseleave', () => { carouselTimer = setInterval(() => goTo(carouselIndex + 1), 5000); });
+  }
+}
+
+// ============================================================
+// FAQ ACCORDION
+// ============================================================
+function initFAQ() {
+  const container = document.getElementById('faq-list');
+  if (!container) return;
+  container.innerHTML = FAQ_ITEMS.map((item, i) => `
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" aria-controls="faq-body-${i}" id="faq-btn-${i}">
+        <span>${item.q}</span>
+        <span class="faq-icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-body" id="faq-body-${i}" role="region" aria-labelledby="faq-btn-${i}">
+        <div class="faq-inner">${item.a}</div>
+      </div>
+    </div>
+  `).join('');
+
+  container.querySelectorAll('.faq-btn').forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const body = document.getElementById(`faq-body-${i}`);
+      const isOpen = item.classList.contains('open');
+      // Close all
+      container.querySelectorAll('.faq-item').forEach(it => {
+        it.classList.remove('open');
+        it.querySelector('.faq-btn').setAttribute('aria-expanded','false');
+        const b = it.querySelector('.faq-body');
+        b.style.height = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        body.style.height = body.scrollHeight + 'px';
+      }
+    });
+  });
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(message, type = 'info') {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+  const toasts = container.querySelectorAll('.toast');
+  if (toasts.length >= 3) toasts[0].remove();
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.setAttribute('role', 'status');
+  toast.innerHTML = `<span style="flex:1">${message}</span><button onclick="this.parentElement.remove()" style="background:none;border:none;cursor:pointer;color:inherit;opacity:.7;font-size:1rem;padding:0;margin-left:8px;line-height:1" aria-label="Dismiss">✕</button>`;
+  container.appendChild(toast);
+
+  // Swipe-to-dismiss
+  let startX = 0;
+  toast.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; });
+  toast.addEventListener('touchend', (e) => {
+    if (e.changedTouches[0].clientX - startX > 60) {
+      toast.classList.add('dismissing');
+      setTimeout(() => toast.remove(), 200);
+    }
+  });
+
+  setTimeout(() => {
+    if (toast.parentElement) {
+      toast.classList.add('dismissing');
+      setTimeout(() => toast.remove(), 200);
+    }
+  }, 4000);
+}
+
+// ============================================================
+// INIT ALL
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  initHero();
+  initScrollReveal();
+  initExcuseGenerator();
+  initKnights();
+  initTopRated();
+  initCarousel();
+  initFAQ();
+});
+</script>
+</body>
+</html>
