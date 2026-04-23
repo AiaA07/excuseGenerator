@@ -225,6 +225,40 @@ ANIMATION ON ASSEMBLY:
 - Accordion:         height transition 280ms + icon rotate 200ms
 - Carousel:          slide 500ms with easing from Step 3
 
+
+After generating the website, create a build-report.json file with EXACTLY this structure:
+
+{
+  "pipeline": "/excuse-generator",
+  "generatedAt": "<ISO timestamp>",
+  "briefSource": "brief.txt",
+  "mcp": {
+    "stitch": "fired|skipped|failed",
+    "firecrawl": "fired|skipped|failed", 
+    "magic": "fired|skipped|failed"
+  },
+  "skills": {
+    "brand": "fired|skipped",
+    "ui-ux-pro-max": "fired|skipped",
+    "design-system": "fired|skipped",
+    "design": "fired|skipped",
+    "ui-styling": "fired|skipped"
+  },
+  "stitch": {
+    "<section_name>": "fired|fell-back|skipped"
+  },
+  "notes": {
+    "<reason_for_skips>": "<explanation>"
+  }
+}
+
+Status meanings:
+- "fired": Successfully executed and used in final output
+- "skipped": Not used (explain why in notes)
+- "fell-back": Attempted but failed, used fallback
+- "failed": Attempted and failed, no fallback available
+
+
 ==============================================================
 END OF BRIEF
 ==============================================================

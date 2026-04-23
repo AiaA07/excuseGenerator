@@ -1,425 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=1200">
-<title>OG Card — Excuse Generator 3000</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1200"/>
+<title>Excuse Generator 3000 — OG Card</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    width: 1200px;
-    height: 630px;
-    overflow: hidden;
-    font-family: 'Nunito', sans-serif;
-    background: #FDF6E3;
-  }
-
-  .card {
-    width: 1200px;
-    height: 630px;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Left panel — parchment */
-  .left {
-    width: 520px;
-    height: 100%;
-    background: #FDF6E3;
-    padding: 64px 56px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    z-index: 2;
-  }
-
-  .left::after {
-    content: '';
-    position: absolute;
-    right: -1px;
-    top: 0;
-    bottom: 0;
-    width: 48px;
-    background: linear-gradient(to right, #FDF6E3, transparent);
-    z-index: 3;
-  }
-
-  /* Logo */
-  .logo-row {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .logo-icon {
-    width: 52px;
-    height: 52px;
-    flex-shrink: 0;
-  }
-
-  .logo-wordmark {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: #2C1A0E;
-    line-height: 1.3;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .logo-wordmark span {
-    display: block;
-    font-weight: 400;
-    font-size: 11px;
-    color: #8B6347;
-    letter-spacing: 0.12em;
-  }
-
-  /* Main copy */
-  .main-copy {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 32px 0;
-  }
-
-  .overline {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #D4960F;
-    margin-bottom: 16px;
-  }
-
-  .headline {
-    font-family: 'Cinzel', serif;
-    font-weight: 900;
-    font-size: 38px;
-    line-height: 1.15;
-    color: #2C1A0E;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
-  }
-
-  .headline em {
-    font-style: normal;
-    color: #D94F3B;
-  }
-
-  .tagline {
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #4A2F1A;
-    line-height: 1.55;
-    margin-bottom: 28px;
-  }
-
-  /* Verdict badges */
-  .badges {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .badge {
-    padding: 5px 14px;
-    border-radius: 9999px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  .badge-truth { background: #2D6A4F; color: #FDF6E3; }
-  .badge-plaus { background: #D4960F; color: #2C1A0E; }
-  .badge-lie   { background: #D94F3B; color: #FDF6E3; }
-  .badge-excx  { background: #2C1A0E; color: #D4960F; }
-
-  /* Bottom bar */
-  .bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .site-url {
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #8B6347;
-    letter-spacing: 0.06em;
-  }
-
-  .cta-pill {
-    background: #D94F3B;
-    color: #FDF6E3;
-    font-family: 'Nunito', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 8px 22px;
-    border-radius: 9999px;
-    letter-spacing: 0.02em;
-  }
-
-  /* Right panel — illustration */
-  .right {
-    flex: 1;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .right-bg {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #5B2D8E 0%, #3D1D66 40%, #2C1A0E 100%);
-  }
-
-  /* Decorative castle silhouette */
-  .castle-silhouette {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 220px;
-  }
-
-  /* Floating parchment */
-  .float-parchment {
-    position: absolute;
-    top: 72px;
-    left: 40px;
-    width: 280px;
-    background: #FDF6E3;
-    border-radius: 16px;
-    padding: 24px 28px;
-    box-shadow: 0 16px 48px rgba(44,26,14,0.4), 0 4px 16px rgba(44,26,14,0.2);
-    transform: rotate(-3deg);
-  }
-
-  .parchment-label {
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #D4960F;
-    margin-bottom: 10px;
-  }
-
-  .parchment-excuse {
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #2C1A0E;
-    line-height: 1.5;
-    margin-bottom: 14px;
-  }
-
-  .parchment-verdict {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .verdict-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #2D6A4F;
-    flex-shrink: 0;
-  }
-
-  .verdict-text {
-    font-family: 'Nunito', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: #2D6A4F;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  /* Lie detector widget */
-  .float-detector {
-    position: absolute;
-    top: 64px;
-    right: 36px;
-    width: 200px;
-    height: 200px;
-    background: #3D1D66;
-    border-radius: 24px;
-    box-shadow: 0 12px 40px rgba(44,26,14,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(4deg);
-  }
-
-  .gauge-label {
-    position: absolute;
-    top: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Cinzel', serif;
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #D4960F;
-    white-space: nowrap;
-  }
-
-  /* Stars decoration */
-  .star {
-    position: absolute;
-    background: #D4960F;
-    clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
-    opacity: 0.6;
-  }
-
-  /* Paw print overlay */
-  .paw-overlay {
-    position: absolute;
-    bottom: 80px;
-    right: 24px;
-    opacity: 0.08;
-  }
-
-  /* Grain texture overlay */
-  .grain {
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 10;
-  }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #E8614A; font-family: 'Inter', sans-serif; position: relative; }
+  .safe { padding: 64px; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-icon { width: 48px; height: 48px; }
+  .logo-text { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #FFF8EF; letter-spacing: 0.5px; line-height: 1.2; }
+  .logo-text span { font-size: 24px; display: block; }
+  .main { flex: 1; display: flex; align-items: center; gap: 64px; }
+  .copy { flex: 1; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 900; color: #FFF8EF; line-height: 1.05; margin-bottom: 20px; }
+  .sub { font-size: 22px; color: rgba(255,248,239,0.85); font-weight: 400; line-height: 1.5; max-width: 460px; }
+  .gauge-area { width: 300px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .footer-tag { font-size: 14px; color: rgba(255,248,239,0.6); letter-spacing: 3px; text-transform: uppercase; font-weight: 500; }
+  /* Background decorative blobs */
+  .blob1 { position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; border-radius: 50%; background: rgba(255,255,255,0.08); z-index: 1; }
+  .blob2 { position: absolute; bottom: -100px; left: 200px; width: 300px; height: 300px; border-radius: 50%; background: rgba(45,74,107,0.2); z-index: 1; }
+  .blob3 { position: absolute; top: 50%; right: 120px; transform: translateY(-50%); width: 200px; height: 200px; border-radius: 50%; background: rgba(245,183,49,0.15); z-index: 1; }
 </style>
 </head>
 <body>
-<div class="card">
-
-  <!-- Left parchment panel -->
-  <div class="left">
-    <div class="logo-row">
-      <svg class="logo-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Crown -->
-        <path d="M18 18 L13 8 L19 14 L26 6 L33 14 L39 8 L34 18 Z" fill="#D4960F" stroke="#2C1A0E" stroke-width="1.5" stroke-linejoin="round"/>
-        <!-- Crown band -->
-        <rect x="13" y="17" width="26" height="6" rx="2" fill="#D4960F" stroke="#2C1A0E" stroke-width="1.5"/>
-        <!-- Paw pad (main) -->
-        <ellipse cx="26" cy="34" rx="10" ry="8" fill="#D94F3B" stroke="#2C1A0E" stroke-width="1.75"/>
-        <!-- Toe beans -->
-        <circle cx="20" cy="27" r="3.5" fill="#D94F3B" stroke="#2C1A0E" stroke-width="1.5"/>
-        <circle cx="26" cy="25" r="3.5" fill="#D94F3B" stroke="#2C1A0E" stroke-width="1.5"/>
-        <circle cx="32" cy="27" r="3.5" fill="#D94F3B" stroke="#2C1A0E" stroke-width="1.5"/>
-        <!-- Quill -->
-        <line x1="33" y1="38" x2="44" y2="22" stroke="#D4960F" stroke-width="2" stroke-linecap="round"/>
-        <path d="M44 22 C46 18, 48 20, 46 24 C44 26, 42 25, 42 22 Z" fill="#F5EDD8" stroke="#8B6347" stroke-width="1"/>
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+  <div class="blob3"></div>
+  <div class="safe">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M10 36 A20 20 0 0 1 38 36" stroke="#FFF8EF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M10 36 A20 20 0 0 1 20 18" stroke="#F5B731" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <line x1="24" y1="36" x2="36" y2="14" stroke="#F5B731" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="24" cy="36" r="3.5" fill="#FFF8EF"/>
       </svg>
-      <div class="logo-wordmark">
-        Excuse Generator
-        <span>3000 · Château Barkalot</span>
+      <div class="logo-text">
+        <span>Excuse Generator</span>
+        3000
       </div>
     </div>
-
-    <div class="main-copy">
-      <div class="overline">Hark! A lie of noble proportion</div>
-      <h1 class="headline">Medieval excuses<br>for <em>modern</em> problems.</h1>
-      <p class="tagline">Generate alibi-grade excuses rated by<br>the Knightly Lie Detector. No jousting required.</p>
-      <div class="badges">
-        <span class="badge badge-truth">✓ Truthful</span>
-        <span class="badge badge-plaus">~ Plausible</span>
-        <span class="badge badge-lie">⚠ Hark! A Lie!</span>
-        <span class="badge badge-excx">☠ EXCOMMUNICADO</span>
+    <div class="main">
+      <div class="copy">
+        <h1>Your excuse.<br>Rated.<br>Exposed.</h1>
+        <p class="sub">Generate modern excuses. The Lie Detector rates your alibi's believability — from Truthful to Total Lie.</p>
+      </div>
+      <div class="gauge-area">
+        <svg viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="280" height="200">
+          <!-- Gauge housing -->
+          <rect x="10" y="60" width="260" height="140" rx="24" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <!-- Gauge arc background -->
+          <path d="M40 155 A100 100 0 0 1 240 155" stroke="rgba(255,255,255,0.15)" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <!-- Truth zone (green) -->
+          <path d="M40 155 A100 100 0 0 1 90 90" stroke="#5C8C5A" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <!-- Plausible zone (gold) -->
+          <path d="M90 90 A100 100 0 0 1 140 75" stroke="#F5B731" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <!-- Stretching zone (slate) -->
+          <path d="M140 75 A100 100 0 0 1 190 90" stroke="#4A6888" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <!-- Lie zone (coral) -->
+          <path d="M190 90 A100 100 0 0 1 240 155" stroke="#F5917E" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <!-- Needle -->
+          <line x1="140" y1="155" x2="175" y2="88" stroke="#F5B731" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="140" cy="155" r="8" fill="#FFF8EF" stroke="#F5B731" stroke-width="2"/>
+          <!-- Labels -->
+          <text x="28" y="178" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,248,239,0.7)">TRUTH</text>
+          <text x="218" y="178" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,248,239,0.7)">LIE</text>
+          <!-- Badge -->
+          <rect x="90" y="170" width="100" height="22" rx="11" fill="rgba(245,183,49,0.25)" stroke="#F5B731" stroke-width="1"/>
+          <text x="140" y="185" font-family="JetBrains Mono,monospace" font-size="10" fill="#F5B731" text-anchor="middle" font-weight="600">PLAUSIBLE</text>
+        </svg>
       </div>
     </div>
-
-    <div class="bottom">
-      <span class="site-url">excusegenerator3000.com</span>
-      <span class="cta-pill">Generate Excuse →</span>
-    </div>
+    <div class="footer-tag">excusegenerator3000.com</div>
   </div>
-
-  <!-- Right illustration panel -->
-  <div class="right">
-    <div class="right-bg"></div>
-
-    <!-- Castle silhouette -->
-    <svg class="castle-silhouette" viewBox="0 0 680 220" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
-      <path d="
-        M0,220 L0,140
-        L30,140 L30,120 L50,120 L50,140
-        L80,140 L80,100 L100,100 L100,80 L120,80 L120,100 L140,100 L140,140
-        L170,140 L170,110 L190,110 L190,90 L210,90 L210,110 L230,110 L230,140
-        L260,140 L260,120 L280,120 L280,100 L300,100 L300,80 L320,80 L320,100 L340,100 L340,120 L360,120 L360,140
-        L390,140 L390,105 L410,105 L410,85 L430,85 L430,105 L450,105 L450,140
-        L480,140 L480,115 L500,115 L500,95 L520,95 L520,115 L540,115 L540,140
-        L570,140 L570,125 L590,125 L590,145
-        L620,145 L620,130 L640,130 L640,145
-        L680,145 L680,220 Z
-      " fill="#2C1A0E" opacity="0.5"/>
-      <path d="
-        M0,220 L0,165 L680,165 L680,220 Z
-      " fill="#2C1A0E" opacity="0.7"/>
-    </svg>
-
-    <!-- Floating parchment excuse card -->
-    <div class="float-parchment">
-      <div class="parchment-label">⚔ Quest (Work)</div>
-      <div class="parchment-excuse">"The dragon consumed my deliverables. The quest continues at dawn."</div>
-      <div class="parchment-verdict">
-        <div class="verdict-dot"></div>
-        <div class="verdict-text">Truthful</div>
-      </div>
-    </div>
-
-    <!-- Lie detector widget -->
-    <div class="float-detector">
-      <span class="gauge-label">Knightly Lie Detector</span>
-      <svg viewBox="0 0 140 120" width="140" height="120" xmlns="http://www.w3.org/2000/svg">
-        <!-- Arc zones -->
-        <path d="M 20,90 A 50,50 0 0,1 70,40" stroke="#D94F3B" stroke-width="10" fill="none" stroke-linecap="round"/>
-        <path d="M 70,40 A 50,50 0 0,1 90,52" stroke="#D4960F" stroke-width="10" fill="none" stroke-linecap="round"/>
-        <path d="M 90,52 A 50,50 0 0,1 120,90" stroke="#2D6A4F" stroke-width="10" fill="none" stroke-linecap="round"/>
-        <!-- Center hub -->
-        <circle cx="70" cy="90" r="8" fill="#D4960F"/>
-        <!-- Needle pointing to "Truthful" zone -->
-        <line x1="70" y1="90" x2="105" y2="55" stroke="#D4960F" stroke-width="3" stroke-linecap="round"/>
-        <!-- LED dots -->
-        <circle cx="30" cy="75" r="4" fill="#D94F3B"/>
-        <circle cx="25" cy="60" r="4" fill="#D94F3B" opacity="0.4"/>
-        <circle cx="100" cy="60" r="4" fill="#2D6A4F" opacity="0.9"/>
-        <circle cx="110" cy="75" r="4" fill="#2D6A4F"/>
-      </svg>
-    </div>
-
-    <!-- Decorative stars -->
-    <div class="star" style="width:14px;height:14px;top:36px;left:60px;transform:rotate(15deg)"></div>
-    <div class="star" style="width:10px;height:10px;top:160px;left:90px;transform:rotate(-20deg)"></div>
-    <div class="star" style="width:18px;height:18px;top:90px;right:50px;transform:rotate(8deg)"></div>
-    <div class="star" style="width:8px;height:8px;top:200px;right:80px;transform:rotate(30deg)"></div>
-
-    <!-- Large paw print watermark -->
-    <svg class="paw-overlay" width="160" height="160" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="26" cy="34" rx="10" ry="8" fill="#FDF6E3"/>
-      <circle cx="20" cy="27" r="3.5" fill="#FDF6E3"/>
-      <circle cx="26" cy="25" r="3.5" fill="#FDF6E3"/>
-      <circle cx="32" cy="27" r="3.5" fill="#FDF6E3"/>
-    </svg>
-
-    <!-- Grain texture -->
-    <div class="grain"></div>
-  </div>
-
-</div>
 </body>
 </html>

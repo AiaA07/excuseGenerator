@@ -1,1620 +1,885 @@
+<!-- build-provenance
+  pipeline: /animated-website
+  generated-at: 2026-04-23T14:40:00Z
+  brief-source: brief.txt
+  mcp:
+    stitch: fired
+    firecrawl: fired
+    magic: skipped
+  skills:
+    brand: fired
+    ui-ux-pro-max: fired
+    design-system: fired
+    design: fired
+    ui-styling: fired
+    nano-banana-2: skipped
+  images:
+    hero: tier-3
+    lie-detector-gauge: tier-3
+    og-card: tier-3
+    all-icons: tier-3
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Excuse Generator 3000 — Your Excuse. Rated. Exposed.</title>
-  <meta name="description" content="Generate modern excuses for work, dating, sports, and life. Our Lie Detector rates your alibi's believability from Truthful to Total Lie." />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Excuse Generator 3000 — Your Excuse. Rated. Exposed.</title>
+<meta name="description" content="Generate modern excuses for work, school, dating, sports, and life. Our Lie Detector rates your alibi's believability from Truthful to Total Lie."/>
+<meta property="og:title" content="Excuse Generator 3000 — Your Excuse. Rated. Exposed."/>
+<meta property="og:description" content="Generate modern excuses. Our Lie Detector rates your alibi's believability — from Truthful to Total Lie."/>
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23FFF8EF'/%3E%3Ccircle cx='200' cy='315' r='100' fill='%23E8614A' opacity='0.2'/%3E%3Ccircle cx='1000' cy='315' r='150' fill='%23F5B731' opacity='0.15'/%3E%3Ctext x='600' y='280' font-family='Georgia' font-size='52' font-weight='bold' fill='%23E8614A' text-anchor='middle'%3EExcuse Generator 3000%3C/text%3E%3Ctext x='600' y='360' font-family='Inter' font-size='28' fill='%232D4A6B' text-anchor='middle'%3EYour excuse. Rated. Exposed.%3C/text%3E%3C/svg%3E"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Excuse Generator 3000","description":"Generate modern excuses. Lie Detector rates believability.","applicationCategory":"EntertainmentApplication","offers":{"@type":"Offer","price":"0"}}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet"/>
+<style>
+/* ---------- DESIGN TOKENS ---------- */
+:root {
+  --color-primary: #E8614A;
+  --color-primary-dark: #D44A34;
+  --color-secondary: #2D4A6B;
+  --color-tertiary: #5C8C5A;
+  --color-accent: #F5B731;
+  --color-surface-base: #FFF8EF;
+  --color-surface-raised: #F5EDE4;
+  --color-surface-overlay: #EDE0D3;
+  --color-ink: #2C241E;
+  --color-ink-muted: #4A3D35;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 40px;
+  --radius-pill: 9999px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.10);
+  --shadow-clay: 0 4px 0 rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.08);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-micro: 150ms;
+  --duration-standard: 300ms;
+  --duration-expressive: 600ms;
+  --duration-hero: 900ms;
+}
 
-  <!-- OG / Social -->
-  <meta property="og:title" content="Excuse Generator 3000 — Your Excuse. Rated. Exposed." />
-  <meta property="og:description" content="Generate modern excuses for work, dating, sports, and life. Our Lie Detector rates your alibi's believability from Truthful to Total Lie." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="og-card.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Excuse Generator 3000 — Your Excuse. Rated. Exposed." />
-  <meta name="twitter:description" content="Generate modern excuses for work, dating, sports, and life." />
-  <meta name="twitter:image" content="og-card.png" />
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Excuse Generator 3000",
-    "description": "Generate modern excuses rated by our Lie Detector from Truthful to Total Lie.",
-    "applicationCategory": "EntertainmentApplication",
-    "operatingSystem": "Web"
+body {
+  background: var(--color-surface-base);
+  color: var(--color-ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.15;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- CLAY COMPONENTS ---------- */
+.clay-card {
+  box-shadow: var(--shadow-clay);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-raised);
+}
+
+.clay-button-primary {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 0 rgba(180, 50, 30, 0.3), 0 8px 16px rgba(232, 97, 74, 0.2);
+  transition: transform var(--duration-micro), box-shadow var(--duration-micro);
+}
+
+.clay-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(180, 50, 30, 0.3), 0 12px 24px rgba(232, 97, 74, 0.25);
+}
+
+.clay-button-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(180, 50, 30, 0.3);
+}
+
+.clay-button-secondary {
+  background: var(--color-secondary);
+  color: white;
+  box-shadow: 0 4px 0 rgba(20, 40, 60, 0.3), 0 8px 16px rgba(45, 74, 107, 0.2);
+  transition: transform var(--duration-micro), box-shadow var(--duration-micro);
+}
+
+.clay-button-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.clay-button-secondary:active {
+  transform: translateY(2px);
+}
+
+.clay-pill-active {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 0 rgba(232, 97, 74, 0.3), 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.clay-pill-inactive {
+  background: var(--color-surface-raised);
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+  transition: all var(--duration-micro);
+}
+
+.clay-pill-inactive:hover {
+  transform: translateY(-2px);
+  background: white;
+}
+
+/* ---------- LIE DETECTOR GAUGE ---------- */
+.gauge-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.gauge-bg {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  background: conic-gradient(from 270deg at 50% 100%, var(--color-tertiary) 0deg, var(--color-accent) 90deg, var(--color-primary) 180deg);
+  mask: radial-gradient(circle at 50% 100%, transparent 58%, black 60%);
+  -webkit-mask: radial-gradient(circle at 50% 100%, transparent 58%, black 60%);
+  border-radius: 50% 50% 0 0;
+}
+
+.gauge-needle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  height: 70%;
+  background: var(--color-accent);
+  transform-origin: bottom center;
+  transform: rotate(-15deg);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  transition: transform var(--duration-expressive) var(--ease-out);
+}
+
+.gauge-needle::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ---------- LED BLINK ---------- */
+@keyframes ledBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.led-blink {
+  animation: ledBlink var(--duration-micro) ease-in-out 3;
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- HERO STAGGER ---------- */
+.hero-item {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.hero-item.loaded {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--duration-hero) var(--ease-out), transform var(--duration-hero) var(--ease-out);
+}
+
+/* ---------- FAQ ACCORDION ---------- */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 280ms var(--ease-out);
+}
+
+.accordion-content.open {
+  max-height: 300px;
+}
+
+.accordion-chevron {
+  transition: transform 200ms var(--ease-out);
+}
+
+.accordion-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* ---------- TOAST ---------- */
+@keyframes toastIn {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes toastOut {
+  to { transform: translateX(120%); opacity: 0; }
+}
+
+.toast {
+  animation: toastIn 300ms var(--ease-out);
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  box-shadow: var(--shadow-clay);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.toast.dismissing {
+  animation: toastOut 300ms var(--ease-out) forwards;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.toast { pointer-events: all; }
+
+/* ---------- MODAL ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 36, 30, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 20000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  max-width: 440px;
+  width: 90%;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+/* ---------- BADGES ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: monospace;
+}
+
+.badge-truthful { background: var(--color-tertiary); color: white; }
+.badge-plausible { background: var(--color-accent); color: var(--color-ink); }
+.badge-stretching { background: var(--color-secondary); color: white; }
+.badge-total-lie { background: var(--color-primary); color: white; }
+
+/* ---------- UTILITIES ---------- */
+.btn-lift {
+  transition: transform var(--duration-standard) var(--ease-out), box-shadow var(--duration-standard) var(--ease-out);
+  cursor: pointer;
+}
+
+.btn-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-lift:active {
+  transform: translateY(1px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transform: none !important;
   }
-  </script>
+  .reveal { opacity: 1; transform: none; }
+  .hero-item { opacity: 1; transform: none; }
+}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    /* ============================================================
-       DESIGN TOKENS
-    ============================================================ */
-    :root {
-      --color-primary:       #E8503A;
-      --color-primary-dark:  #C93E29;
-      --color-secondary:     #2D3B55;
-      --color-tertiary:      #5A7D5A;
-      --color-accent:        #F5B731;
-      --color-surface-base:  #FFF8EF;
-      --color-surface-raised:#F5EDE4;
-      --color-ink:           #2C241E;
-      --color-ink-muted:     #6B5A50;
-      --color-success:       #6B9E6B;
-      --color-border:        rgba(44,36,30,0.10);
-
-      --radius-sm:  8px;
-      --radius-md:  16px;
-      --radius-lg:  24px;
-      --radius-xl:  32px;
-      --radius-pill:9999px;
-
-      --shadow-sm:  0 2px 8px  rgba(0,0,0,0.05);
-      --shadow-md:  0 8px 24px rgba(0,0,0,0.08);
-      --shadow-lg:  0 16px 48px rgba(0,0,0,0.10);
-
-      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-      --dur-micro: 150ms;
-      --dur-std:   300ms;
-      --dur-exp:   600ms;
-      --dur-hero:  900ms;
-
-      --font-display: 'DM Serif Display', Georgia, serif;
-      --font-body:    'Inter', system-ui, sans-serif;
-
-      --space-1:  4px;
-      --space-2:  8px;
-      --space-3:  12px;
-      --space-4:  16px;
-      --space-6:  24px;
-      --space-8:  32px;
-      --space-12: 48px;
-      --space-16: 64px;
-      --space-24: 96px;
-      --space-32: 128px;
-
-      --container: 1280px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 200ms !important;
-        transition-duration: 200ms !important;
-        transform: none !important;
-      }
-    }
-
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-body);
-      font-size: 17px;
-      line-height: 1.55;
-      color: var(--color-ink);
-      background: var(--color-surface-base);
-    }
-
-    img, svg { display: block; }
-    button { cursor: pointer; font-family: inherit; border: none; background: none; }
-    input, textarea, select { font-family: inherit; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ============================================================
-       SKIP LINK
-    ============================================================ */
-    .skip-link {
-      position: absolute;
-      top: -100%;
-      left: var(--space-4);
-      background: var(--color-ink);
-      color: #fff;
-      padding: var(--space-2) var(--space-4);
-      border-radius: var(--radius-sm);
-      font-size: 14px;
-      font-weight: 600;
-      z-index: 9999;
-      transition: top var(--dur-micro);
-    }
-    .skip-link:focus { top: var(--space-4); }
-
-    /* ============================================================
-       LAYOUT UTILITIES
-    ============================================================ */
-    .container {
-      width: 100%;
-      max-width: var(--container);
-      margin-inline: auto;
-      padding-inline: var(--space-6);
-    }
-    @media (min-width: 1024px) {
-      .container { padding-inline: var(--space-12); }
-    }
-
-    section { padding-block: var(--space-12); }
-    @media (min-width: 640px)  { section { padding-block: var(--space-16); } }
-    @media (min-width: 1024px) { section { padding-block: var(--space-24); } }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-      margin-bottom: var(--space-2);
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
-      line-height: 1.15;
-      color: var(--color-ink);
-      margin-bottom: var(--space-4);
-    }
-    .section-sub {
-      font-size: 17px;
-      color: var(--color-ink-muted);
-      max-width: 560px;
-    }
-    .section-header { margin-bottom: var(--space-8); }
-
-    /* ============================================================
-       BUTTONS
-    ============================================================ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: 14px var(--space-8);
-      border-radius: var(--radius-pill);
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1;
-      transition: transform var(--dur-micro) var(--ease-out),
-                  box-shadow var(--dur-micro) var(--ease-out),
-                  background var(--dur-micro);
-      min-height: 44px;
-      white-space: nowrap;
-    }
-    .btn:hover  { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-    .btn:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
-    .btn:focus-visible {
-      outline: 2px solid var(--color-accent);
-      outline-offset: 2px;
-    }
-
-    .btn-primary {
-      background: var(--color-primary);
-      color: #fff;
-      box-shadow: var(--shadow-md);
-    }
-    .btn-primary:hover { background: var(--color-primary-dark); }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--color-secondary);
-      border: 2px solid var(--color-secondary);
-    }
-    .btn-secondary:hover { background: var(--color-secondary); color: #fff; }
-
-    .btn-ghost {
-      background: var(--color-surface-raised);
-      color: var(--color-ink);
-      box-shadow: var(--shadow-sm);
-    }
-    .btn-ghost:hover { box-shadow: var(--shadow-md); }
-
-    .btn-icon {
-      padding: 12px;
-      border-radius: var(--radius-pill);
-      background: var(--color-surface-raised);
-      color: var(--color-ink-muted);
-      box-shadow: var(--shadow-sm);
-      min-height: 44px;
-      min-width: 44px;
-      justify-content: center;
-    }
-    .btn-icon:hover { color: var(--color-primary); box-shadow: var(--shadow-md); }
-
-    .btn.loading { opacity: 0.65; pointer-events: none; }
-
-    /* ============================================================
-       NAV
-    ============================================================ */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,248,239,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--color-border);
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      color: var(--color-ink);
-    }
-    .nav-logo svg { flex-shrink: 0; }
-    .nav-links {
-      display: none;
-      gap: var(--space-8);
-      list-style: none;
-    }
-    @media (min-width: 640px) { .nav-links { display: flex; } }
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--color-ink-muted);
-      transition: color var(--dur-micro);
-    }
-    .nav-links a:hover { color: var(--color-primary); }
-    .nav-links a:focus-visible { outline: 2px solid var(--color-accent); border-radius: 4px; }
-    .nav-cta { font-size: 14px; padding: 10px var(--space-6); }
-
-    /* ============================================================
-       HERO
-    ============================================================ */
-    .hero {
-      padding-block: var(--space-16) var(--space-12);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    @media (min-width: 1024px) { .hero { padding-block: var(--space-32) var(--space-24); } }
-
-    .hero-blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.25;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .hero-blob-1 {
-      width: 500px; height: 500px;
-      background: var(--color-primary);
-      top: -200px; right: -100px;
-    }
-    .hero-blob-2 {
-      width: 400px; height: 400px;
-      background: var(--color-accent);
-      bottom: -150px; left: -80px;
-    }
-
-    .hero-inner { position: relative; z-index: 1; }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      background: var(--color-surface-raised);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-pill);
-      padding: var(--space-2) var(--space-4);
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-ink-muted);
-      margin-bottom: var(--space-6);
-      animation: fadeRise var(--dur-hero) var(--ease-out) both;
-    }
-    .hero-badge span { color: var(--color-primary); }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 7vw, 5.5rem);
-      line-height: 1.08;
-      color: var(--color-ink);
-      margin-bottom: var(--space-6);
-      animation: fadeRise var(--dur-hero) var(--ease-out) 80ms both;
-    }
-    .hero-title em {
-      font-style: italic;
-      color: var(--color-primary);
-    }
-
-    .hero-tagline {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: var(--color-ink-muted);
-      max-width: 520px;
-      margin-inline: auto;
-      margin-bottom: var(--space-8);
-      animation: fadeRise var(--dur-hero) var(--ease-out) 160ms both;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-4);
-      justify-content: center;
-      animation: fadeRise var(--dur-hero) var(--ease-out) 240ms both;
-    }
-    .hero-cta { font-size: 18px; padding: 16px var(--space-12); }
-
-    @keyframes fadeRise {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ============================================================
-       LIE DETECTOR
-    ============================================================ */
-    .lie-detector-section {
-      background: var(--color-surface-raised);
-    }
-    .detector-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-8);
-    }
-    @media (min-width: 1024px) {
-      .detector-wrap { flex-direction: row; justify-content: center; gap: var(--space-16); }
-    }
-
-    .gauge-housing {
-      position: relative;
-      width: 320px;
-      height: 200px;
-      flex-shrink: 0;
-    }
-
-    .gauge-svg { width: 100%; height: 100%; }
-
-    /* Track: truth (green) → lie (red) arc */
-    .gauge-track-truth { stroke: var(--color-tertiary); }
-    .gauge-track-lie   { stroke: var(--color-primary);  }
-    .gauge-track-mid   { stroke: var(--color-accent);   }
-
-    .gauge-needle {
-      transform-origin: 160px 160px;
-      transform: rotate(-85deg);
-      transition: transform var(--exp, 600ms) var(--ease-out);
-    }
-
-    .detector-info { max-width: 400px; }
-    .detector-rating-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-2) var(--space-4);
-      border-radius: var(--radius-pill);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-4);
-      transition: background var(--dur-std), color var(--dur-std);
-    }
-    .rating-truthful    { background: rgba(90,125,90,0.15);  color: var(--color-tertiary); }
-    .rating-plausible   { background: rgba(245,183,49,0.20); color: #b88a00; }
-    .rating-stretching  { background: rgba(232,80,58,0.12);  color: var(--color-primary); }
-    .rating-lie         { background: rgba(232,80,58,0.20);  color: var(--color-primary); }
-
-    .detector-verdict {
-      font-family: 'DM Serif Display', serif;
-      font-style: italic;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--color-ink);
-      margin-bottom: var(--space-3);
-      min-height: 2.4em;
-    }
-    .detector-sub {
-      font-size: 15px;
-      color: var(--color-ink-muted);
-      min-height: 1.6em;
-    }
-
-    /* LEDs */
-    .leds {
-      display: flex;
-      gap: var(--space-2);
-      margin-top: var(--space-6);
-    }
-    .led {
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      background: var(--color-border);
-      transition: background var(--dur-micro);
-    }
-    .led.active { background: var(--color-accent); box-shadow: 0 0 8px var(--color-accent); }
-    .led.red    { background: var(--color-primary); box-shadow: 0 0 8px var(--color-primary); }
-    .led.green  { background: var(--color-tertiary); box-shadow: 0 0 8px var(--color-tertiary); }
-
-    /* ============================================================
-       CATEGORY SELECTOR
-    ============================================================ */
-    .categories-section { padding-block: var(--space-8); }
-    .categories-inner {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-6);
-    }
-    .category-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-3);
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: 10px var(--space-4);
-      border-radius: var(--radius-pill);
-      border: 2px solid var(--color-border);
-      background: var(--color-surface-raised);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--color-ink-muted);
-      cursor: pointer;
-      transition: all var(--dur-micro) var(--ease-out);
-      min-height: 44px;
-    }
-    .pill:hover { border-color: var(--color-primary); color: var(--color-primary); }
-    .pill.active {
-      background: var(--color-primary);
-      border-color: var(--color-primary);
-      color: #fff;
-      box-shadow: var(--shadow-md);
-    }
-    .pill:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-
-    /* ============================================================
-       EXCUSE OUTPUT
-    ============================================================ */
-    .excuse-output-section { background: var(--color-surface-base); }
-    .excuse-card {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: var(--space-8);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      overflow: hidden;
-    }
-    .excuse-card::before {
-      content: '\201C';
-      position: absolute;
-      top: -20px;
-      left: var(--space-6);
-      font-family: var(--font-display);
-      font-size: 120px;
-      line-height: 1;
-      color: var(--color-surface-raised);
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .excuse-text {
-      font-family: var(--font-display);
-      font-size: clamp(1.25rem, 3vw, 1.75rem);
-      line-height: 1.4;
-      color: var(--color-ink);
-      margin-bottom: var(--space-8);
-      position: relative;
-      min-height: 3em;
-      transition: opacity var(--dur-std) var(--ease-out);
-    }
-    .excuse-text.fading { opacity: 0; }
-
-    .excuse-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-3);
-      align-items: center;
-    }
-    .excuse-actions .btn-primary { flex: 1 1 auto; justify-content: center; }
-
-    .toast-msg {
-      position: fixed;
-      bottom: var(--space-6);
-      left: 50%;
-      transform: translateX(-50%) translateY(0);
-      background: var(--color-ink);
-      color: #fff;
-      padding: var(--space-3) var(--space-6);
-      border-radius: var(--radius-pill);
-      font-size: 14px;
-      font-weight: 600;
-      z-index: 999;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity var(--dur-std) var(--ease-out);
-    }
-    .toast-msg.show { opacity: 1; }
-
-    /* ============================================================
-       CUSTOM EXCUSE BUILDER
-    ============================================================ */
-    .builder-section { background: var(--color-surface-raised); }
-    .builder-card {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: var(--space-8);
-      box-shadow: var(--shadow-md);
-      max-width: 640px;
-      margin-inline: auto;
-    }
-    .form-group { margin-bottom: var(--space-6); }
-    .form-label {
-      display: block;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--color-ink);
-      margin-bottom: var(--space-2);
-    }
-    .form-input, .form-textarea {
-      width: 100%;
-      padding: 12px var(--space-4);
-      border: 2px solid var(--color-border);
-      border-radius: var(--radius-md);
-      font-size: 16px;
-      color: var(--color-ink);
-      background: var(--color-surface-base);
-      transition: border-color var(--dur-micro);
-      min-height: 44px;
-    }
-    .form-textarea { resize: vertical; min-height: 100px; }
-    .form-input:focus, .form-textarea:focus {
-      outline: none;
-      border-color: var(--color-primary);
-      box-shadow: 0 0 0 3px rgba(232,80,58,0.12);
-    }
-    .form-input:focus-visible, .form-textarea:focus-visible {
-      outline: 2px solid var(--color-accent);
-      outline-offset: 2px;
-    }
-    .form-error {
-      font-size: 13px;
-      color: var(--color-primary);
-      margin-top: var(--space-1);
-      display: none;
-    }
-    .form-error.visible { display: block; }
-
-    /* Dialog */
-    .dialog-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(44,36,30,0.4);
-      z-index: 500;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(4px);
-    }
-    .dialog-overlay.open { display: flex; }
-    .dialog {
-      background: #fff;
-      border-radius: var(--radius-xl);
-      padding: var(--space-8);
-      max-width: 420px;
-      width: calc(100% - var(--space-8));
-      box-shadow: var(--shadow-lg);
-      animation: dialogIn var(--dur-exp) var(--ease-out) both;
-    }
-    @keyframes dialogIn {
-      from { opacity: 0; transform: scale(0.92) translateY(16px); }
-      to   { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .dialog-title {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      margin-bottom: var(--space-4);
-    }
-    .dialog-body { color: var(--color-ink-muted); margin-bottom: var(--space-6); }
-    .dialog-actions { display: flex; gap: var(--space-3); justify-content: flex-end; }
-
-    /* ============================================================
-       TOP RATED
-    ============================================================ */
-    .top-rated-section { background: var(--color-surface-base); }
-    .leaderboard {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-4);
-    }
-    .leaderboard-item {
-      display: flex;
-      gap: var(--space-4);
-      align-items: flex-start;
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: var(--space-6);
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow var(--dur-micro) var(--ease-out),
-                  transform var(--dur-micro) var(--ease-out);
-    }
-    .leaderboard-item:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-
-    .rank {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      line-height: 1;
-      color: var(--color-accent);
-      min-width: 2.5ch;
-    }
-    .rank-1 { color: var(--color-accent); }
-    .rank-2 { color: var(--color-ink-muted); }
-    .rank-3 { color: #c07240; }
-
-    .lb-excuse {
-      flex: 1;
-      font-size: 16px;
-      color: var(--color-ink);
-      font-style: italic;
-    }
-    .lb-meta {
-      font-size: 13px;
-      color: var(--color-ink-muted);
-      margin-top: var(--space-1);
-      font-style: normal;
-    }
-    .lb-badge { margin-left: auto; flex-shrink: 0; align-self: flex-start; }
-
-    /* ============================================================
-       TESTIMONIALS
-    ============================================================ */
-    .testimonials-section { background: var(--color-surface-raised); }
-    .carousel {
-      position: relative;
-      overflow: hidden;
-    }
-    .carousel-track {
-      display: flex;
-      gap: var(--space-6);
-      transition: transform 500ms var(--ease-out);
-    }
-    .testimonial-card {
-      flex: 0 0 calc(100% - var(--space-6));
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: var(--space-8);
-      box-shadow: var(--shadow-sm);
-    }
-    @media (min-width: 640px) {
-      .testimonial-card { flex: 0 0 calc(50% - var(--space-3)); }
-    }
-    @media (min-width: 1024px) {
-      .testimonial-card { flex: 0 0 calc(33.333% - var(--space-4)); }
-    }
-    .testimonial-quote {
-      font-size: 16px;
-      color: var(--color-ink);
-      font-style: italic;
-      margin-bottom: var(--space-4);
-    }
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-    }
-    .author-avatar {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 14px; color: #fff;
-      flex-shrink: 0;
-    }
-    .author-name { font-weight: 600; font-size: 14px; color: var(--color-ink); }
-    .author-meta { font-size: 12px; color: var(--color-ink-muted); }
-
-    .carousel-controls {
-      display: flex;
-      gap: var(--space-3);
-      margin-top: var(--space-6);
-      justify-content: center;
-    }
-
-    /* ============================================================
-       FAQ
-    ============================================================ */
-    .faq-section { background: var(--color-surface-base); }
-    .faq-list { max-width: 720px; margin-inline: auto; }
-    .faq-item {
-      border-bottom: 1px solid var(--color-border);
-    }
-    .faq-question {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--space-4);
-      padding: var(--space-6) 0;
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--color-ink);
-      cursor: pointer;
-      text-align: left;
-      transition: color var(--dur-micro);
-      min-height: 44px;
-    }
-    .faq-question:hover { color: var(--color-primary); }
-    .faq-question:focus-visible { outline: 2px solid var(--color-accent); border-radius: var(--radius-sm); }
-    .faq-icon {
-      flex-shrink: 0;
-      transition: transform 200ms var(--ease-out);
-      color: var(--color-ink-muted);
-    }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-    .faq-answer {
-      height: 0;
-      overflow: hidden;
-      transition: height 280ms var(--ease-out);
-    }
-    .faq-answer-inner {
-      padding-bottom: var(--space-6);
-      color: var(--color-ink-muted);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    /* ============================================================
-       FOOTER
-    ============================================================ */
-    .site-footer {
-      background: var(--color-ink);
-      color: rgba(255,248,239,0.7);
-      padding-block: var(--space-12);
-    }
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-8);
-    }
-    @media (min-width: 640px) {
-      .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
-    }
-    .footer-brand {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: rgba(255,248,239,0.9);
-      margin-bottom: var(--space-2);
-    }
-    .footer-fine {
-      font-size: 13px;
-      max-width: 380px;
-    }
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-    }
-    .footer-links a {
-      font-size: 14px;
-      color: rgba(255,248,239,0.6);
-      transition: color var(--dur-micro);
-    }
-    .footer-links a:hover { color: rgba(255,248,239,1); }
-    .footer-copy {
-      border-top: 1px solid rgba(255,248,239,0.1);
-      margin-top: var(--space-8);
-      padding-top: var(--space-6);
-      font-size: 13px;
-      text-align: center;
-      color: rgba(255,248,239,0.4);
-    }
-
-    /* ============================================================
-       SCROLL REVEAL
-    ============================================================ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity var(--dur-exp) var(--ease-out),
-                  transform var(--dur-exp) var(--ease-out);
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal:nth-child(2) { transition-delay: 80ms; }
-    .reveal:nth-child(3) { transition-delay: 160ms; }
-    .reveal:nth-child(4) { transition-delay: 240ms; }
-    .reveal:nth-child(5) { transition-delay: 320ms; }
-
-    /* ============================================================
-       GENERATE BUTTON BOUNCE
-    ============================================================ */
-    @keyframes bounce {
-      0%,100% { transform: translateY(-2px); }
-      50% { transform: translateY(-6px); }
-    }
-    .btn-bounce { animation: bounce 400ms var(--ease-out) 2; }
-
-    /* ============================================================
-       TOOLTIP
-    ============================================================ */
-    [data-tooltip] { position: relative; }
-    [data-tooltip]::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: calc(100% + 8px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--color-ink);
-      color: #fff;
-      font-size: 12px;
-      padding: var(--space-1) var(--space-3);
-      border-radius: var(--radius-sm);
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity var(--dur-micro);
-    }
-    [data-tooltip]:hover::after,
-    [data-tooltip]:focus::after { opacity: 1; }
-  </style>
+/* Section rhythm */
+section { padding: 96px 0; }
+@media (max-width: 1024px) { section { padding: 64px 0; } }
+@media (max-width: 640px) { section { padding: 48px 0; } }
+</style>
 </head>
 <body>
 
-<!-- Skip Link -->
-<a href="#main" class="skip-link">Skip to content</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-accent focus:text-ink focus:px-4 focus:py-2 focus:rounded-full focus:font-bold">Skip to main content</a>
 
-<!-- Toast -->
-<div class="toast-msg" id="toast" role="status" aria-live="polite"></div>
-
-<!-- ============================================================
-     HEADER / NAV
-============================================================ -->
-<header class="site-header" role="banner">
-  <nav class="container nav-inner" aria-label="Main navigation">
-    <a href="/" class="nav-logo" aria-label="Excuse Generator 3000 home">
-      <!-- Inline SVG logo mark: gauge + quote -->
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
-        <rect width="32" height="32" rx="8" fill="#E8503A"/>
-        <path d="M7 22 A10 10 0 0 1 25 22" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
-        <line x1="16" y1="22" x2="22" y2="13" stroke="#F5B731" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="16" cy="22" r="2" fill="#fff"/>
-        <circle cx="10" cy="12" r="1.2" fill="rgba(255,255,255,0.6)"/>
-        <circle cx="13" cy="10" r="1.2" fill="rgba(255,255,255,0.6)"/>
-      </svg>
-      Excuse Generator 3000
-    </a>
-    <ul class="nav-links" role="list">
-      <li><a href="#lie-detector">Lie Detector</a></li>
-      <li><a href="#top-rated">Top Rated</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-    <button class="btn btn-primary nav-cta" onclick="document.getElementById('generate-btn').click()">
-      Generate Excuse
-    </button>
-  </nav>
+<header class="bg-[#FFF8EF] sticky top-0 z-50 border-b border-[#EDE0D3]">
+  <div class="container flex justify-between items-center py-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-[#E8614A] rounded-full flex items-center justify-center shadow-md">
+        <span class="text-white text-xl font-bold">E3</span>
+      </div>
+      <h1 class="font-display text-xl md:text-2xl font-bold text-[#E8614A]">Excuse Generator 3000</h1>
+    </div>
+    <div class="hidden md:flex gap-6">
+      <a href="#lie-detector" class="text-[#2D4A6B] font-medium hover:text-[#E8614A] transition">Lie Detector</a>
+      <a href="#categories" class="text-[#2D4A6B] font-medium hover:text-[#E8614A] transition">Categories</a>
+      <a href="#top-rated" class="text-[#2D4A6B] font-medium hover:text-[#E8614A] transition">Top Rated</a>
+      <a href="#faq" class="text-[#2D4A6B] font-medium hover:text-[#E8614A] transition">FAQ</a>
+    </div>
+    <button class="bg-[#E8614A] text-white px-6 py-2 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all active:translate-y-0" data-action="generate-top">✨ Generate</button>
+  </div>
 </header>
 
-<!-- ============================================================
-     MAIN
-============================================================ -->
-<main id="main">
+<main id="main-content">
 
-  <!-- HERO -->
-  <section class="hero" aria-label="Hero">
-    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="hero-badge" role="note">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M7 4v4M7 9.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <span>100% Free</span> &nbsp;· No lawyers needed
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="absolute top-20 -left-40 w-80 h-80 bg-[#F5B731]/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 -right-40 w-96 h-96 bg-[#E8614A]/10 rounded-full blur-3xl"></div>
+    <div class="container text-center relative">
+      <div class="inline-block mb-6 px-4 py-1 bg-[#F5EDE4] rounded-full text-sm font-mono text-[#2D4A6B] shadow-sm">✨ V3.0 — NOW WITH LIE DETECTOR ✨</div>
+      <div class="hero-item" data-hero-delay="0">
+        <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black text-[#E8614A] mb-4 tracking-tight">Excuse Generator<br>3000</h1>
       </div>
-      <h1 class="hero-title">
-        Your excuse.<br />
-        <em>Rated.</em> Exposed.
-      </h1>
-      <p class="hero-tagline">
-        Generate modern excuses for work, dating, sports &amp; life. Our Lie Detector rates your alibi — from Truthful to Total Lie.
-      </p>
-      <div class="hero-actions">
-        <button id="generate-btn" class="btn btn-primary hero-cta" aria-label="Generate a random excuse">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9a6 6 0 1 1 12 0A6 6 0 0 1 3 9Z" stroke="currentColor" stroke-width="1.5"/><path d="M9 6v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          Generate Excuse
+      <div class="hero-item" data-hero-delay="150">
+        <p class="font-display text-2xl md:text-3xl text-[#2D4A6B] mb-6 italic">Your excuse. Rated. Exposed.</p>
+      </div>
+      <div class="hero-item" data-hero-delay="300">
+        <p class="max-w-2xl mx-auto text-lg text-[#4A3D35] mb-10">Generate hilarious excuses for work, school, dating, sports, or chaos. Our Lie Detector tells you if anyone will buy it.</p>
+      </div>
+      <div class="hero-item flex flex-col sm:flex-row gap-4 justify-center" data-hero-delay="450">
+        <button class="clay-button-primary px-8 py-4 rounded-full text-lg font-bold flex items-center gap-2 justify-center" data-action="generate-hero">
+          <span>⚡</span> Generate Excuse
         </button>
-        <button class="btn btn-secondary" onclick="document.getElementById('builder').scrollIntoView({behavior:'smooth'})">
-          Build My Own
+        <button class="clay-button-secondary px-8 py-4 rounded-full text-lg font-bold flex items-center gap-2 justify-center" onclick="document.getElementById('custom-builder').scrollIntoView({behavior:'smooth'})">
+          <span>✏️</span> Build Your Own
         </button>
       </div>
     </div>
   </section>
 
-  <!-- LIE DETECTOR -->
-  <section class="lie-detector-section" id="lie-detector" aria-label="Lie Detector meter">
+  <!-- LIE DETECTOR SECTION -->
+  <section id="lie-detector" class="bg-[#F5EDE4]/40 reveal">
     <div class="container">
-      <div class="section-header" style="text-align:center">
-        <p class="section-label">The Science of Sus</p>
-        <h2 class="section-title">Lie Detector 3000™</h2>
-        <p class="section-sub" style="margin-inline:auto">Every excuse gets rated. No mercy. We're rooting for you — mostly.</p>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-[#2C241E] mb-3">The Lie Detector</h2>
+        <p class="text-[#4A3D35] text-lg">We analyze your alibi's audacity level</p>
       </div>
-
-      <div class="detector-wrap">
-        <!-- Gauge -->
-        <div class="gauge-housing reveal" aria-hidden="true">
-          <svg class="gauge-svg" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-
-            <!-- Housing -->
-            <rect x="8" y="8" width="304" height="184" rx="28" fill="white" stroke="rgba(44,36,30,0.08)" stroke-width="1"/>
-
-            <!-- Track segments: green (truth) center-left, yellow (mid), red (lie) right -->
-            <!-- Arc is roughly -170deg to -10deg relative to bottom center -->
-            <path d="M 40 165 A 120 120 0 0 1 100 53" stroke="#5A7D5A" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.8"/>
-            <path d="M 100 53 A 120 120 0 0 1 160 32" stroke="#F5B731" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.8"/>
-            <path d="M 160 32 A 120 120 0 0 1 220 53" stroke="#F5B731" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.8"/>
-            <path d="M 220 53 A 120 120 0 0 1 280 165" stroke="#E8503A" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.8"/>
-
-            <!-- Tick marks -->
-            <line x1="40" y1="165" x2="48" y2="157" stroke="rgba(44,36,30,0.2)" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="100" y1="53" x2="105" y2="61" stroke="rgba(44,36,30,0.2)" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="160" y1="32" x2="160" y2="42" stroke="rgba(44,36,30,0.2)" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="220" y1="53" x2="215" y2="61" stroke="rgba(44,36,30,0.2)" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="280" y1="165" x2="272" y2="157" stroke="rgba(44,36,30,0.2)" stroke-width="1.5" stroke-linecap="round"/>
-
-            <!-- Labels -->
-            <text x="32" y="185" text-anchor="middle" font-size="11" font-family="Inter,sans-serif" font-weight="600" fill="#5A7D5A">Truthful</text>
-            <text x="288" y="185" text-anchor="middle" font-size="11" font-family="Inter,sans-serif" font-weight="600" fill="#E8503A">Total Lie</text>
-
-            <!-- Center hub -->
-            <circle cx="160" cy="165" r="10" fill="white" stroke="rgba(44,36,30,0.12)" stroke-width="2"/>
-
-            <!-- Needle group -->
-            <g class="gauge-needle" id="gauge-needle">
-              <line x1="160" y1="165" x2="160" y2="52" stroke="#F5B731" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
-              <polygon points="157,165 163,165 161,58 159,58" fill="#F5B731" opacity="0.3"/>
-            </g>
-
-            <!-- Center dot -->
-            <circle cx="160" cy="165" r="5" fill="#2C241E"/>
-          </svg>
+      <div class="max-w-2xl mx-auto clay-card p-8 md:p-12">
+        <div class="gauge-container mb-8">
+          <div class="gauge-bg"></div>
+          <div class="gauge-needle" id="gaugeNeedle" style="--start-deg: -15deg; transform: rotate(-15deg); --target-deg: 30deg;"></div>
         </div>
-
-        <!-- Info panel -->
-        <div class="detector-info reveal">
-          <span class="detector-rating-badge rating-plausible" id="rating-badge" aria-live="polite">
-            Plausible
-          </span>
-          <div class="detector-verdict" id="detector-verdict" aria-live="polite">
-            Hmm… you might survive this one.
+        <div class="flex justify-between text-xs md:text-sm font-bold text-[#4A3D35] uppercase tracking-wider mb-8 px-4">
+          <span class="text-[#5C8C5A]">Truthful</span>
+          <span class="text-[#F5B731]">Plausible</span>
+          <span class="text-[#E8614A]">Stretching</span>
+          <span class="text-[#E8614A]">Total Lie</span>
+        </div>
+        <div class="text-center space-y-4" aria-live="polite">
+          <div class="flex justify-center gap-3 mb-2" id="ledIndicators">
+            <div class="w-3 h-3 rounded-full bg-[#5C8C5A] opacity-40"></div>
+            <div class="w-3 h-3 rounded-full bg-[#F5B731] opacity-40"></div>
+            <div class="w-3 h-3 rounded-full bg-[#E8614A] opacity-40"></div>
+            <div class="w-3 h-3 rounded-full bg-[#E8614A] opacity-40"></div>
           </div>
-          <div class="detector-sub" id="detector-sub">
-            Hit "Generate Excuse" to get your alibi rated instantly.
-          </div>
-          <div class="leds" aria-hidden="true" id="leds">
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-          </div>
+          <div class="badge" id="lieBadge">Plausible</div>
+          <p class="text-xl md:text-2xl font-medium text-[#2D4A6B] italic" id="lieVerdict">Plausible — you might survive this one.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CATEGORY SELECTOR + EXCUSE OUTPUT -->
-  <section class="categories-section excuse-output-section" aria-label="Excuse generator">
+  <!-- CATEGORY + EXCUSE OUTPUT (quotation mark removed) -->
+  <section id="categories" class="reveal">
     <div class="container">
-      <div class="categories-inner">
-
-        <!-- Pills -->
-        <div role="group" aria-label="Excuse category">
-          <p class="section-label" style="margin-bottom:var(--space-3)">Choose Your Scenario</p>
-          <div class="category-pills" id="category-pills">
-            <button class="pill active" data-cat="work" aria-pressed="true">
-              <!-- Laptop icon -->
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-label="Work category icon" role="img"><rect x="2" y="3" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M1 13h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              Work
-            </button>
-            <button class="pill" data-cat="sports" aria-pressed="false">
-              <!-- Running figure icon -->
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-label="Sports &amp; Fitness category icon" role="img"><circle cx="10" cy="3.5" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 7l3-2 2 2.5-1.5 3L11 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M5 14l2-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              Sports &amp; Fitness
-            </button>
-            <button class="pill" data-cat="dating" aria-pressed="false">
-              <!-- Broken heart icon -->
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-label="Dating category icon" role="img"><path d="M8 13.5S2 9.5 2 5.5A3.5 3.5 0 0 1 8 3.67 3.5 3.5 0 0 1 14 5.5c0 4-6 8-6 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 7l1 1.5 2-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Dating
-            </button>
-            <button class="pill" data-cat="chaos" aria-pressed="false">
-              <!-- Sparkle icon -->
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-label="General Chaos category icon" role="img"><path d="M8 2v2M8 12v2M2 8h2M12 8h2M4.2 4.2l1.4 1.4M10.4 10.4l1.4 1.4M4.2 11.8l1.4-1.4M10.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
-              General Chaos
-            </button>
-            <button class="pill" data-cat="custom" aria-pressed="false">
-              <!-- Pencil icon -->
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-label="Custom Excuse category icon" role="img"><path d="M11 2l3 3-8 8H3v-3l8-8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Custom
-            </button>
-          </div>
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button class="px-5 py-2.5 rounded-full font-semibold clay-pill-active" data-category="work">💼 Work</button>
+        <button class="px-5 py-2.5 rounded-full font-semibold clay-pill-inactive" data-category="school">📚 School & Academics</button>
+        <button class="px-5 py-2.5 rounded-full font-semibold clay-pill-inactive" data-category="sports">🏃 Sports</button>
+        <button class="px-5 py-2.5 rounded-full font-semibold clay-pill-inactive" data-category="dating">💔 Dating</button>
+        <button class="px-5 py-2.5 rounded-full font-semibold clay-pill-inactive" data-category="chaos">🌀 Chaos</button>
+      </div>
+      <div class="max-w-3xl mx-auto clay-card p-10 md:p-14 text-center">
+        <!-- Removed the decorative golden quotation mark here -->
+        <p class="text-2xl md:text-3xl font-serif text-[#2C241E] leading-relaxed" id="excuseOutput">My WiFi ate my Zoom link and I literally watched it happen in real time.</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+          <button class="bg-[#E8614A] text-white px-6 py-3 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all" data-action="regenerate">
+            🔄 Regenerate
+          </button>
+          <button class="bg-[#2D4A6B] text-white px-6 py-3 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all" data-action="copy">
+            📋 Copy Excuse
+          </button>
+          <button class="border-2 border-[#E8614A] text-[#E8614A] px-6 py-3 rounded-full font-bold hover:bg-[#E8614A]/5 transition-all" data-action="share">
+            🔗 Share
+          </button>
         </div>
-
-        <!-- Excuse card -->
-        <div class="excuse-card reveal" id="excuse-card">
-          <p class="excuse-text" id="excuse-text" aria-live="polite">
-            "My WiFi ate my Zoom link. I tried everything — restart, incognito, a brief cry in the bathroom. Nothing worked."
-          </p>
-          <div class="excuse-actions">
-            <button id="generate-main" class="btn btn-primary" aria-label="Generate a new excuse">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8A5 5 0 1 1 3 8M13 8V5M13 8h-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Regenerate
-            </button>
-            <button class="btn btn-icon" id="copy-btn" data-tooltip="Copy excuse" aria-label="Copy excuse to clipboard">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5" y="5" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 11H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <button class="btn btn-icon" id="share-btn" data-tooltip="Share excuse" aria-label="Share this excuse">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="12" cy="3" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="4" cy="8" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 3.7L5.5 7M10.5 12.3L5.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- CUSTOM EXCUSE BUILDER -->
-  <section class="builder-section" id="builder" aria-label="Custom excuse builder">
-    <div class="container">
-      <div class="section-header" style="text-align:center">
-        <p class="section-label">Roll Your Own</p>
-        <h2 class="section-title">Custom Excuse Builder</h2>
-        <p class="section-sub" style="margin-inline:auto">Got a specific situation? Tell us what happened (allegedly). We'll rate it. No judgment. Okay, a little judgment.</p>
+  <section id="custom-builder" class="bg-[#F5EDE4]/30 reveal">
+    <div class="container max-w-2xl">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-[#2C241E]">✍️ Build Your Own Lie</h2>
+        <p class="text-[#4A3D35] mt-2">Because sometimes the default excuses aren't specific enough</p>
       </div>
-      <div class="builder-card reveal">
-        <form id="custom-form" novalidate>
-          <div class="form-group">
-            <label class="form-label" for="field-situation">What's the situation?</label>
-            <input
-              class="form-input"
-              id="field-situation"
-              name="situation"
-              type="text"
-              placeholder="e.g. Late to a meeting, missed gym class…"
-              autocomplete="off"
-              aria-required="true"
-            />
-            <p class="form-error" id="err-situation" role="alert">Please describe the situation.</p>
+      <div class="clay-card p-8">
+        <form id="customForm" class="space-y-6">
+          <div>
+            <label class="block font-bold text-[#2D4A6B] mb-2">What's the situation?</label>
+            <input type="text" id="situation" placeholder="e.g., Missed a deadline, skipped class, forgot assignment" class="w-full p-4 border-2 border-[#EDE0D3] rounded-xl focus:border-[#E8614A] focus:outline-none transition">
           </div>
-          <div class="form-group">
-            <label class="form-label" for="field-reason">Your reason (the "truth"):</label>
-            <textarea
-              class="form-textarea"
-              id="field-reason"
-              name="reason"
-              placeholder="e.g. My calendar did a sync error. My alarm went off but I was spiritually unavailable."
-              aria-required="true"
-            ></textarea>
-            <p class="form-error" id="err-reason" role="alert">Please enter your reason.</p>
+          <div>
+            <label class="block font-bold text-[#2D4A6B] mb-2">Your creative reason:</label>
+            <textarea id="reason" rows="3" placeholder="e.g., My cat sat on my keyboard during the exam submission" class="w-full p-4 border-2 border-[#EDE0D3] rounded-xl focus:border-[#E8614A] focus:outline-none transition"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2l1.4 4.3H14l-3.7 2.7 1.4 4.3L8 10.6 4.3 13.3l1.4-4.3L2 6.3h4.6L8 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Rate My Excuse
-          </button>
+          <button type="submit" class="clay-button-primary w-full py-4 rounded-full text-lg font-bold">⚡ Rate My Excuse</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- TOP RATED -->
-  <section class="top-rated-section" id="top-rated" aria-label="Top rated excuses">
+  <!-- TOP RATED EXCUSES -->
+  <section id="top-rated" class="reveal">
     <div class="container">
-      <div class="section-header">
-        <p class="section-label">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle;margin-right:4px" aria-hidden="true"><path d="M7 1l1.6 3.3 3.6.5-2.6 2.5.6 3.6L7 9.3l-3.2 1.6.6-3.6L1.8 4.8l3.6-.5L7 1Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Community Leaderboard
-        </p>
-        <h2 class="section-title">Top Rated Excuses</h2>
-        <p class="section-sub">These legends escaped with their dignity mostly intact.</p>
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 bg-[#F5B731]/20 px-4 py-2 rounded-full mb-4">
+          <span>🏆</span>
+          <span class="font-bold text-[#2D4A6B]">Hall of Fame</span>
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-[#2C241E]">Top Rated Excuses</h2>
       </div>
-      <div class="leaderboard" id="leaderboard">
-        <!-- Populated by JS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="clay-card p-6 hover:-translate-y-1 transition-all">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-4xl font-black text-[#E8614A]">#1</span>
+            <span class="badge badge-total-lie">Total Lie</span>
+          </div>
+          <p class="text-lg font-serif italic mb-4">"My Zoom background ate my face during the presentation."</p>
+          <div class="text-sm text-[#4A3D35]">👍 1,284 votes</div>
+        </div>
+        <div class="clay-card p-6 hover:-translate-y-1 transition-all">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-4xl font-black text-[#E8614A]">#2</span>
+            <span class="badge badge-plausible">Plausible</span>
+          </div>
+          <p class="text-lg font-serif italic mb-4">"The LMS crashed right before I could submit my assignment."</p>
+          <div class="text-sm text-[#4A3D35]">👍 1,102 votes</div>
+        </div>
+        <div class="clay-card p-6 hover:-translate-y-1 transition-all">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-4xl font-black text-[#E8614A]">#3</span>
+            <span class="badge badge-stretching">Stretching</span>
+          </div>
+          <p class="text-lg font-serif italic mb-4">"I time-blocked this recovery window and forgot to unblock it."</p>
+          <div class="text-sm text-[#4A3D35]">👍 942 votes</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials-section" aria-label="User testimonials">
+  <section class="bg-[#F5EDE4]/40 reveal">
     <div class="container">
-      <div class="section-header" style="text-align:center">
-        <p class="section-label">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle;margin-right:4px" aria-hidden="true"><path d="M2 2h10a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H7l-3 2V10H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Real (Allegedly) Reviews
-        </p>
-        <h2 class="section-title">What People Are Saying</h2>
-        <p class="section-sub" style="margin-inline:auto">No compensation was offered. Certainly no lawyers were involved.</p>
-      </div>
-      <div class="carousel reveal" role="region" aria-label="Testimonials carousel">
-        <div class="carousel-track" id="testimonial-track">
-          <!-- Populated by JS -->
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center mb-10">⭐ Real Reviews (Probably)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="clay-card p-6 text-center">
+          <div class="text-[#F5B731] text-xl mb-2">★★★★★</div>
+          <p class="italic mb-3">"Used the school excuse for a late assignment. Professor actually bought it!"</p>
+          <p class="font-bold text-[#2D4A6B]">— College Student</p>
         </div>
-      </div>
-      <div class="carousel-controls" role="group" aria-label="Carousel controls">
-        <button class="btn btn-icon" id="prev-btn" aria-label="Previous testimonials">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 4L6 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button class="btn btn-icon" id="next-btn" aria-label="Next testimonials">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        <div class="clay-card p-6 text-center">
+          <div class="text-[#F5B731] text-xl mb-2">★★★★★</div>
+          <p class="italic mb-3">"The Lie Detector roasted me so hard. 10/10 would lie again."</p>
+          <p class="font-bold text-[#2D4A6B]">— Jordan L.</p>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="text-[#F5B731] text-xl mb-2">★★★★☆</div>
+          <p class="italic mb-3">"My boss actually believed the WiFi ghost story. Unreal."</p>
+          <p class="font-bold text-[#2D4A6B]">— Sam K.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
-    <div class="container">
-      <div class="section-header" style="text-align:center">
-        <p class="section-label">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle;margin-right:4px" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 5.5a1.5 1.5 0 0 1 3 0c0 1-1.5 1.5-1.5 2.5M7 10v.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          You Asked, We Answered
-        </p>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-list" id="faq-list">
-        <!-- Populated by JS -->
+  <section id="faq" class="reveal">
+    <div class="container max-w-3xl">
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-center mb-10">❓ Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <div class="clay-card overflow-hidden">
+          <button class="accordion-trigger w-full text-left p-5 font-bold text-lg flex justify-between items-center hover:bg-white/30 transition">
+            <span>Is this legally binding?</span>
+            <span class="accordion-chevron">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5">
+            <p class="text-[#4A3D35]">Absolutely not. We are an excuse generator, not a law firm. Use at your own risk (and amusement).</p>
+          </div>
+        </div>
+        <div class="clay-card overflow-hidden">
+          <button class="accordion-trigger w-full text-left p-5 font-bold text-lg flex justify-between items-center hover:bg-white/30 transition">
+            <span>Can I use these for real?</span>
+            <span class="accordion-chevron">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5">
+            <p class="text-[#4A3D35]">We recommend them for low-stakes social situations rather than major life events. Results may vary.</p>
+          </div>
+        </div>
+        <div class="clay-card overflow-hidden">
+          <button class="accordion-trigger w-full text-left p-5 font-bold text-lg flex justify-between items-center hover:bg-white/30 transition">
+            <span>How does the Lie Detector work?</span>
+            <span class="accordion-chevron">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5">
+            <p class="text-[#4A3D35]">Our proprietary Alibi-Analysis Engine uses 4,200 data points of failed eye contact and vocal tremors to rate your fib. (It's random but don't tell anyone.)</p>
+          </div>
+        </div>
+        <div class="clay-card overflow-hidden">
+          <button class="accordion-trigger w-full text-left p-5 font-bold text-lg flex justify-between items-center hover:bg-white/30 transition">
+            <span>What's the most believable excuse?</span>
+            <span class="accordion-chevron">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5">
+            <p class="text-[#4A3D35]">The Sincerity Paradox — the more specific the detail, the less likely they are to ask questions.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- Dialog -->
-<div class="dialog-overlay" id="dialog-overlay" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
-  <div class="dialog">
-    <h2 class="dialog-title" id="dialog-title">Excuse Submitted!</h2>
-    <p class="dialog-body" id="dialog-body">Your excuse has been rated and added to the leaderboard queue. May the odds be ever in your favour.</p>
-    <div class="dialog-actions">
-      <button class="btn btn-primary" id="dialog-close">Got it</button>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">Excuse Generator 3000</div>
-        <p class="footer-fine">
-          For entertainment purposes only. We are not responsible for misused excuses, broken relationships, missed meetings, or irreparable damage to your reputation. You're on your own, friend.
-        </p>
-      </div>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#lie-detector">Lie Detector</a>
-        <a href="#top-rated">Top Rated</a>
-        <a href="#builder">Build My Own</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+<footer class="bg-[#2D4A6B] text-white mt-16 py-12">
+  <div class="container text-center">
+    <div class="font-display text-2xl mb-4">Excuse Generator 3000</div>
+    <p class="text-sm opacity-80 mb-6">For entertainment purposes only. We are not responsible for failed alibis, late assignments, or suspicious professors.</p>
+    <div class="flex flex-wrap justify-center gap-6 text-sm opacity-70">
+      <a href="#" class="hover:opacity-100 transition">Privacy</a>
+      <a href="#" class="hover:opacity-100 transition">Terms of Fibbing</a>
+      <a href="#" class="hover:opacity-100 transition">Contact</a>
     </div>
-    <p class="footer-copy">© 2026 Excuse Generator 3000. "Your excuse. Rated. Exposed." All lies reserved.</p>
+    <p class="text-xs opacity-50 mt-8">© 2026 Excuse Generator 3000 — Lie Responsibly.</p>
   </div>
 </footer>
 
-<!-- ============================================================
-     JAVASCRIPT
-============================================================ -->
+<!-- MODAL -->
+<div id="verdictModal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="mb-4" id="modalBadge"></div>
+    <h3 class="font-display text-2xl font-bold mb-2">The Verdict</h3>
+    <p class="text-lg text-[#E8614A] font-semibold mb-4" id="modalVerdict"></p>
+    <p class="text-[#4A3D35] mb-6" id="modalMessage"></p>
+    <button class="clay-button-primary px-6 py-2 rounded-full" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
 <script>
-(function () {
-  'use strict';
+// ========== EXCUSE DATABASE ==========
+const EXCUSES = {
+  work: [
+    "My WiFi ate my Zoom link and I literally watched it happen in real time.",
+    "Calendar had a full sync error. Three hours gone. I'm as shocked as you are.",
+    "The algorithm scheduled me into a conflict I wasn't even invited to.",
+    "My laptop entered existential crisis mode right before standup.",
+    "I got an email that was so vague it paralyzed me for 45 minutes.",
+    "My notifications staged a coordinated mutiny. I'm still recovering."
+  ],
+  school: [
+    "The LMS crashed right as I hit submit. I swear I finished on time.",
+    "My dog literally ate my homework. Not even kidding. Send help.",
+    "I had 47 tabs open and my laptop chose violence. Assignment gone.",
+    "My citation generator formatted everything in Wingdings and I couldn't fix it.",
+    "I was in the library, then the fire alarm happened. Priorities shifted.",
+    "My group partner uploaded the wrong file and I'm taking one for the team.",
+    "I studied the wrong chapter. The syllabus was from last semester.",
+    "My alarm clock did a hard reset overnight. I woke up at 2 PM.",
+    "The exam was open for 24 hours and I read that as 'due tomorrow at midnight'.",
+    "I attended the Zoom lecture but my mic was on. I'm recovering socially.",
+    "I wrote my essay in a Google Doc that I accidentally shared with my entire extended family. Had to abandon it.",
+    "The professor said 'no late work' and my anxiety took that as a personal challenge."
+  ],
+  sports: [
+    "My body did a silent protest. Non-negotiable.",
+    "The gym's WiFi went down and I couldn't pull up my playlist. That's a sign.",
+    "I manifested rest day energy this morning. The universe agreed.",
+    "My running shoes sent very mixed signals about today's intentions.",
+    "I'm in active recovery from yesterday's almost-workout.",
+    "My fitness tracker said 'maybe tomorrow' and I respect that."
+  ],
+  dating: [
+    "My phone died at 12% and that felt deeply symbolic.",
+    "I'm ghosting my own plans right now. It's a vibe.",
+    "Got a notification from a forgotten app at the worst moment.",
+    "My horoscope said today was for reflection, not socializing.",
+    "Something came up. (Something = my couch and a convincing documentary.)",
+    "I consulted the group chat and they said absolutely not."
+  ],
+  chaos: [
+    "I made a decision based on vibes and they lied.",
+    "Mercury is in retrograde and honestly that explains everything.",
+    "I checked the group chat at the wrong time and now I need recovery.",
+    "The snooze button and I have an understanding that cannot be broken.",
+    "I did the math and it didn't add up, so I didn't go.",
+    "My brain decided to reboot without saving my progress."
+  ]
+};
 
-  /* ---------- DATA ---------- */
-  const EXCUSES = {
-    work: [
-      '"My WiFi ate my Zoom link. I tried everything — restart, incognito, a brief cry in the bathroom. Nothing worked."',
-      '"Sorry, my calendar did a sync error. It moved the meeting to next Tuesday. In a parallel universe."',
-      '"My laptop updated right as I was about to join. It\'s fine. I watched the recording. Most of it."',
-      '"My email said the meeting was cancelled. I believed it. I should not have believed it."',
-      '"The algorithm said no. I cannot override the algorithm."',
-      '"My microphone decided today was a personal day. I respect that."',
-      '"I was on mute for 20 minutes. Everything I said was very insightful."',
-      '"My VPN had a philosophical disagreement with my router."',
-    ],
-    sports: [
-      '"My body entered a scheduled maintenance mode. I did not approve this update."',
-      '"I was there in spirit. My legs disagreed and stayed home."',
-      '"My fitness tracker said I\'d already hit 10,000 steps from the anxiety of being awake."',
-      '"The sports weren\'t doing it for me today. I tried a different sport: horizontal relaxation."',
-      '"My right knee filed a formal complaint. HR is reviewing it."',
-      '"I ran a 5K in my head. Same endorphins, way less shin splints."',
-    ],
-    dating: [
-      '"My phone died at exactly the wrong moment. It knew. It always knows."',
-      '"I was there — at the wrong restaurant. For 45 minutes. The salad was okay."',
-      '"My autocorrect sent that. I\'m still filing a complaint with Apple."',
-      '"I ghosted myself. It was a confusing Tuesday."',
-      '"I meant to text. Then I thought about texting. Then I fell asleep thinking about texting."',
-      '"My read receipts are on a spiritual retreat. They\'ll be back next week."',
-    ],
-    chaos: [
-      '"Something came up. It was everything. All at once."',
-      '"I was going to explain but then the explanation needed its own explanation."',
-      '"My stars were not aligned. Mercury was in retrograde AND my landlord texted."',
-      '"I tried. Then I stopped trying. Then I tried to explain why I stopped trying."',
-      '"Circumstances beyond my control, including but not limited to: time, space, and my own judgment."',
-      '"The universe said no. Who am I to argue with the universe?"',
-      '"My executive function is on leave. I\'ve left a message. No ETA."',
-    ],
-    custom: [
-      '"Your custom excuse is being processed by our Lie Detector engineers. Please hold."',
-    ],
-  };
+const RATINGS = [
+  { label: "Truthful", verdict: "Wait... are you actually telling the truth? Suspicious.", deg: -65, badgeClass: "badge-truthful", color: "#5C8C5A", message: "Honestly? This might actually be true. We're impressed and concerned." },
+  { label: "Plausible", verdict: "Plausible — you might survive this one.", deg: -15, badgeClass: "badge-plausible", color: "#F5B731", message: "Solid alibi. With confident delivery, you'll get away with it." },
+  { label: "Stretching", verdict: "Hmm. That's a stretch, my friend.", deg: 30, badgeClass: "badge-stretching", color: "#2D4A6B", message: "You're pushing it. Add a specific detail to sell it harder." },
+  { label: "Total Lie", verdict: "Yikes. Big lie energy detected.", deg: 70, badgeClass: "badge-total-lie", color: "#E8614A", message: "Excommunicado. Nobody's buying this. Try again." }
+];
 
-  const RATINGS = [
-    {
-      key: 'truthful',
-      label: 'Truthful',
-      badgeClass: 'rating-truthful',
-      verdict: 'Actually believable. Are you sure you need us?',
-      sub: 'Solid alibi. You might just be innocent.',
-      needle: -82,
-      ledClass: 'green',
-      ledCount: 2,
-    },
-    {
-      key: 'plausible',
-      label: 'Plausible',
-      badgeClass: 'rating-plausible',
-      verdict: 'Hmm… you might survive this one.',
-      sub: 'Plausible — you might survive. Keep a straight face.',
-      needle: -30,
-      ledClass: 'active',
-      ledCount: 3,
-    },
-    {
-      key: 'stretching',
-      label: 'That\'s a Stretch',
-      badgeClass: 'rating-stretching',
-      verdict: 'That\'s a stretch, my friend.',
-      sub: 'We see what you\'re doing here. Big lie energy detected.',
-      needle: 25,
-      ledClass: 'active',
-      ledCount: 4,
-    },
-    {
-      key: 'lie',
-      label: 'Total Lie',
-      badgeClass: 'rating-lie',
-      verdict: 'Yikes. That\'s a total lie and we both know it.',
-      sub: 'Excommunicado. You are on your own. Farewell.',
-      needle: 78,
-      ledClass: 'red',
-      ledCount: 5,
-    },
-  ];
+let currentCategory = "work";
+let currentRatingIndex = 1;
 
-  const TOP_EXCUSES = [
-    { rank: 1, text: '"My WiFi ghosted me mid-presentation. I have screenshots of the betrayal."', rating: 'Plausible', cat: 'Work', votes: 2341 },
-    { rank: 2, text: '"My alarm went off but I was spiritually unavailable at 7am."', rating: 'Truthful', cat: 'Sports', votes: 1892 },
-    { rank: 3, text: '"The algorithm said no. I cannot override the algorithm."', rating: 'That\'s a Stretch', cat: 'Work', votes: 1455 },
-    { rank: 4, text: '"Mercury was in retrograde AND my landlord texted. It was chaos."', rating: 'Total Lie', cat: 'General Chaos', votes: 1203 },
-    { rank: 5, text: '"I ran a 5K in my head. Same endorphins, way less shin splints."', rating: 'Plausible', cat: 'Sports', votes: 980 },
-  ];
+// Helper functions
+function showToast(message) {
+  const container = document.getElementById("toastContainer");
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.innerHTML = `<span style="color: #E8614A; font-size: 20px;">✓</span><span>${message}</span>`;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add("dismissing");
+    setTimeout(() => toast.remove(), 300);
+  }, 4000);
+}
 
-  const TESTIMONIALS = [
-    { quote: '"This lie got me out of a meeting. I owe Excuse Generator 3000 my career."', name: 'Jamie R.', meta: 'Marketing Director (allegedly)', color: '#E8503A' },
-    { quote: '"Rated \'Plausible\' and they were right. My boss fully bought it. No notes."', name: 'Sam K.', meta: 'Remote Worker', color: '#2D3B55' },
-    { quote: '"I used the dating excuse. She laughed. We\'re married now. Thank you."', name: 'Alex T.', meta: 'Happily Excused', color: '#5A7D5A' },
-    { quote: '"The Lie Detector called my excuse a \'Total Lie.\' That was fair. I accept it."', name: 'Morgan L.', meta: 'Honest Liar', color: '#F5B731' },
-    { quote: '"My excuse got Top Rated. I put it on my CV under \'Creative Problem Solving.\'"', name: 'Chris B.', meta: 'Definitely Employed', color: '#6B9E6B' },
-    { quote: '"I showed my boss the Plausible badge. It worked. We don\'t talk about it."', name: 'Taylor M.', meta: 'Still Employed (barely)', color: '#C93E29' },
-  ];
-
-  const FAQS = [
-    { q: 'Is this legally binding?', a: 'No. Absolutely not. Please do not use these in court. We are not lawyers. We are also not not-not lawyers. We\'re just a website.' },
-    { q: 'Can I use these for real?', a: 'You can do whatever you want. We\'re not your mum. But if it goes wrong, that\'s between you, the other party, and your conscience.' },
-    { q: 'How does the Lie Detector work?', a: 'State-of-the-art vibes analysis. We measure the plausibility index of your excuse against a proprietary database of human gullibility. The needle goes where it goes.' },
-    { q: 'Will my boss believe these?', a: 'Honestly? Depends on your boss. The Truthful ones are solid. The Total Lie ones are — and we cannot stress this enough — a lot.' },
-    { q: 'What\'s the most believable category?', a: 'Work excuses hit different. WiFi issues and calendar errors are modern poetry. Everyone believes them because everyone has been there.' },
-    { q: 'Can I submit my own excuses?', a: 'Yes! Use the Custom Excuse Builder below. The Lie Detector will rate it and we\'ll add the best ones to the community leaderboard. Fame and plausible deniability await.' },
-  ];
-
-  /* ---------- STATE ---------- */
-  let currentCat = 'work';
-  let currentRating = RATINGS[1];
-  let carouselIndex = 0;
-  const totalSlides = TESTIMONIALS.length;
-
-  /* ---------- ELEMENTS ---------- */
-  const excuseText   = document.getElementById('excuse-text');
-  const generateBtn  = document.getElementById('generate-btn');
-  const generateMain = document.getElementById('generate-main');
-  const needle       = document.getElementById('gauge-needle');
-  const ratingBadge  = document.getElementById('rating-badge');
-  const verdict      = document.getElementById('detector-verdict');
-  const detSub       = document.getElementById('detector-sub');
-  const leds         = document.querySelectorAll('.led');
-  const leaderboard  = document.getElementById('leaderboard');
-  const tTrack       = document.getElementById('testimonial-track');
-  const faqList      = document.getElementById('faq-list');
-  const toast        = document.getElementById('toast');
-  const dialogOverlay = document.getElementById('dialog-overlay');
-  const dialogBody   = document.getElementById('dialog-body');
-  const dialogClose  = document.getElementById('dialog-close');
-  const customForm   = document.getElementById('custom-form');
-
-  /* ---------- UTILS ---------- */
-  function rand(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
+function updateLieDetector(ratingIndex, animate = true) {
+  currentRatingIndex = ratingIndex;
+  const rating = RATINGS[ratingIndex];
+  const needle = document.getElementById("gaugeNeedle");
+  const badge = document.getElementById("lieBadge");
+  const verdict = document.getElementById("lieVerdict");
+  
+  if (needle && animate) {
+    needle.style.transform = `rotate(${rating.deg}deg)`;
+  } else if (needle) {
+    needle.style.transform = `rotate(${rating.deg}deg)`;
   }
-
-  function showToast(msg) {
-    toast.textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2400);
+  if (badge) {
+    badge.className = `badge ${rating.badgeClass}`;
+    badge.textContent = rating.label;
   }
-
-  /* ---------- GAUGE ---------- */
-  function setNeedle(deg) {
-    needle.style.setProperty('--exp', '600ms');
-    needle.style.transform = `rotate(${deg}deg)`;
-  }
-
-  function setRating(rating) {
-    currentRating = rating;
-
-    // Needle
-    setNeedle(rating.needle);
-
-    // Badge
-    ratingBadge.className = `detector-rating-badge ${rating.badgeClass}`;
-    ratingBadge.textContent = rating.label;
-
-    // Verdict
+  if (verdict) {
     verdict.textContent = rating.verdict;
-    detSub.textContent  = rating.sub;
+    verdict.style.color = rating.color;
+  }
+}
 
-    // LEDs blink
-    leds.forEach(l => l.className = 'led');
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i >= rating.ledCount) { clearInterval(interval); return; }
-      leds[i].classList.add(rating.ledClass);
-      i++;
+function generateExcuse() {
+  const excuses = EXCUSES[currentCategory] || EXCUSES.work;
+  const excuse = excuses[Math.floor(Math.random() * excuses.length)];
+  const output = document.getElementById("excuseOutput");
+  if (output) {
+    output.style.opacity = "0.4";
+    setTimeout(() => {
+      output.textContent = `"${excuse}"`;
+      output.style.opacity = "1";
     }, 150);
   }
-
-  function pickRating() {
-    // Weighted: more likely to land in middle
-    const weights = [0.2, 0.35, 0.3, 0.15];
-    const r = Math.random();
-    let cum = 0;
-    for (let i = 0; i < weights.length; i++) {
-      cum += weights[i];
-      if (r < cum) return RATINGS[i];
+  const randomRating = Math.floor(Math.random() * 4);
+  updateLieDetector(randomRating, true);
+  
+  // LED blink effect
+  const leds = document.querySelectorAll("#ledIndicators .w-3");
+  leds.forEach((led, i) => {
+    led.classList.remove("led-blink");
+    if (i === randomRating) {
+      led.classList.add("led-blink");
+      setTimeout(() => led.classList.remove("led-blink"), 500);
     }
-    return RATINGS[1];
-  }
+  });
+}
 
-  /* ---------- GENERATE ---------- */
-  function generate() {
-    const excuses = EXCUSES[currentCat] || EXCUSES.work;
-    const excuse  = rand(excuses);
-    const rating  = pickRating();
+function showModal(ratingIndex, customExcuse = null) {
+  const rating = RATINGS[ratingIndex];
+  const modal = document.getElementById("verdictModal");
+  const badgeDiv = document.getElementById("modalBadge");
+  const verdictSpan = document.getElementById("modalVerdict");
+  const messageP = document.getElementById("modalMessage");
+  
+  badgeDiv.innerHTML = `<span class="badge ${rating.badgeClass}">${rating.label}</span>`;
+  verdictSpan.textContent = rating.verdict;
+  messageP.textContent = customExcuse ? rating.message + " Your custom excuse has been logged." : rating.message;
+  modal.classList.add("open");
+}
 
-    // Crossfade text
-    excuseText.classList.add('fading');
-    setTimeout(() => {
-      excuseText.textContent = excuse;
-      excuseText.classList.remove('fading');
-    }, 220);
+function closeModal() {
+  document.getElementById("verdictModal").classList.remove("open");
+}
 
-    // Rating
-    setRating(rating);
+// Event listeners
+document.querySelectorAll("[data-action='generate-top'], [data-action='generate-hero'], [data-action='regenerate']").forEach(btn => {
+  btn.addEventListener("click", generateExcuse);
+});
 
-    // Bounce button
-    generateMain.classList.remove('btn-bounce');
-    void generateMain.offsetWidth;
-    generateMain.classList.add('btn-bounce');
-  }
-
-  generateBtn.addEventListener('click', generate);
-  generateMain.addEventListener('click', generate);
-
-  /* ---------- CATEGORY PILLS ---------- */
-  document.querySelectorAll('.pill').forEach(pill => {
-    pill.addEventListener('click', () => {
-      document.querySelectorAll('.pill').forEach(p => {
-        p.classList.remove('active');
-        p.setAttribute('aria-pressed', 'false');
-      });
-      pill.classList.add('active');
-      pill.setAttribute('aria-pressed', 'true');
-      currentCat = pill.dataset.cat;
-      generate();
+document.querySelectorAll("[data-category]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentCategory = btn.dataset.category;
+    document.querySelectorAll("[data-category]").forEach(b => {
+      b.classList.remove("clay-pill-active");
+      b.classList.add("clay-pill-inactive");
     });
+    btn.classList.remove("clay-pill-inactive");
+    btn.classList.add("clay-pill-active");
+    generateExcuse();
   });
+});
 
-  /* ---------- COPY ---------- */
-  document.getElementById('copy-btn').addEventListener('click', () => {
-    const text = excuseText.textContent.replace(/^"|"$/g, '');
-    navigator.clipboard.writeText(text).then(() => showToast('Excuse copied. Use wisely.')).catch(() => showToast('Copy failed — try manually selecting.'));
+document.querySelectorAll("[data-action='copy']").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const output = document.getElementById("excuseOutput");
+    const text = output ? output.textContent.replace(/^"|"$/g, '') : "My WiFi ate my Zoom link.";
+    navigator.clipboard.writeText(text);
+    showToast("Excuse copied to clipboard!");
   });
+});
 
-  /* ---------- SHARE ---------- */
-  document.getElementById('share-btn').addEventListener('click', () => {
-    const text = excuseText.textContent;
+document.querySelectorAll("[data-action='share']").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const output = document.getElementById("excuseOutput");
+    const text = output ? output.textContent : "My WiFi ate my Zoom link.";
     if (navigator.share) {
-      navigator.share({ title: 'Excuse Generator 3000', text, url: location.href });
+      navigator.share({ title: "Excuse Generator 3000", text: text });
     } else {
-      navigator.clipboard.writeText(`${text} — generated at ${location.href}`).then(() => showToast('Link copied for sharing!'));
+      showToast("Share link copied!");
     }
   });
+});
 
-  /* ---------- CUSTOM FORM ---------- */
-  customForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const sit = document.getElementById('field-situation');
-    const rea = document.getElementById('field-reason');
-    const errSit = document.getElementById('err-situation');
-    const errRea = document.getElementById('err-reason');
-    let valid = true;
+// Custom form
+document.getElementById("customForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const situation = document.getElementById("situation")?.value.trim();
+  const reason = document.getElementById("reason")?.value.trim();
+  if (!situation || !reason) {
+    showToast("Please fill in both fields before rating!");
+    return;
+  }
+  const randomRating = Math.floor(Math.random() * 4);
+  updateLieDetector(randomRating, true);
+  showModal(randomRating, true);
+});
 
-    errSit.classList.remove('visible');
-    errRea.classList.remove('visible');
-
-    if (!sit.value.trim()) { errSit.classList.add('visible'); sit.focus(); valid = false; }
-    if (!rea.value.trim()) { errRea.classList.add('visible'); if (valid) rea.focus(); valid = false; }
-    if (!valid) return;
-
-    // Generate a custom excuse from the input
-    const customExcuse = `"${sit.value.trim()} — because ${rea.value.trim()}"`;
-    excuseText.classList.add('fading');
-    setTimeout(() => {
-      excuseText.textContent = customExcuse;
-      excuseText.classList.remove('fading');
-    }, 220);
-    setRating(pickRating());
-    document.getElementById('excuse-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // Dialog
-    dialogOverlay.classList.add('open');
-    dialogClose.focus();
-    customForm.reset();
+// Accordion
+document.querySelectorAll(".accordion-trigger").forEach(trigger => {
+  trigger.addEventListener("click", () => {
+    const content = trigger.nextElementSibling;
+    const chevron = trigger.querySelector(".accordion-chevron");
+    const isOpen = content.classList.contains("open");
+    
+    document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+    document.querySelectorAll(".accordion-chevron").forEach(c => {
+      if (c.classList) c.classList.remove("open");
+    });
+    
+    if (!isOpen) {
+      content.classList.add("open");
+      if (chevron) chevron.classList.add("open");
+    }
   });
+});
 
-  dialogClose.addEventListener('click', () => dialogOverlay.classList.remove('open'));
-  dialogOverlay.addEventListener('click', (e) => { if (e.target === dialogOverlay) dialogOverlay.classList.remove('open'); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') dialogOverlay.classList.remove('open'); });
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-  /* ---------- LEADERBOARD ---------- */
-  function renderLeaderboard() {
-    const ratingBadgeClasses = {
-      'Truthful': 'rating-truthful',
-      'Plausible': 'rating-plausible',
-      "That's a Stretch": 'rating-stretching',
-      'Total Lie': 'rating-lie',
-    };
-    leaderboard.innerHTML = TOP_EXCUSES.map(item => `
-      <div class="leaderboard-item reveal">
-        <span class="rank rank-${item.rank}" aria-label="Rank ${item.rank}">${item.rank}</span>
-        <div style="flex:1">
-          <p class="lb-excuse">${item.text}</p>
-          <p class="lb-meta">${item.cat} · ${item.votes.toLocaleString()} votes</p>
-        </div>
-        <span class="detector-rating-badge ${ratingBadgeClasses[item.rating] || 'rating-plausible'} lb-badge">${item.rating}</span>
-      </div>
-    `).join('');
-  }
+// Hero animation
+document.querySelectorAll(".hero-item").forEach((el, i) => {
+  const delay = el.dataset.heroDelay || i * 150;
+  setTimeout(() => el.classList.add("loaded"), parseInt(delay));
+});
 
-  /* ---------- TESTIMONIALS CAROUSEL ---------- */
-  function renderTestimonials() {
-    tTrack.innerHTML = TESTIMONIALS.map(t => `
-      <div class="testimonial-card" role="group" aria-label="Testimonial from ${t.name}">
-        <p class="testimonial-quote">"${t.quote.replace(/^"|"$/g,'')}"</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background:${t.color}" aria-hidden="true">${t.name[0]}</div>
-          <div>
-            <p class="author-name">${t.name}</p>
-            <p class="author-meta">${t.meta}</p>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  function getVisibleCount() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 640)  return 2;
-    return 1;
-  }
-
-  function moveCarousel(dir) {
-    const max = TESTIMONIALS.length - getVisibleCount();
-    carouselIndex = Math.max(0, Math.min(carouselIndex + dir, max));
-    const card = tTrack.querySelector('.testimonial-card');
-    if (!card) return;
-    const gap = 24;
-    const width = card.offsetWidth + gap;
-    tTrack.style.transform = `translateX(-${carouselIndex * width}px)`;
-  }
-
-  document.getElementById('prev-btn').addEventListener('click', () => moveCarousel(-1));
-  document.getElementById('next-btn').addEventListener('click', () => moveCarousel(1));
-  window.addEventListener('resize', () => moveCarousel(0));
-
-  /* ---------- FAQ ACCORDION ---------- */
-  function renderFAQ() {
-    faqList.innerHTML = FAQS.map((item, i) => `
-      <div class="faq-item" id="faq-item-${i}">
-        <button
-          class="faq-question"
-          aria-expanded="false"
-          aria-controls="faq-answer-${i}"
-          id="faq-btn-${i}"
-        >
-          ${item.q}
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </button>
-        <div class="faq-answer" id="faq-answer-${i}" role="region" aria-labelledby="faq-btn-${i}">
-          <div class="faq-answer-inner">${item.a}</div>
-        </div>
-      </div>
-    `).join('');
-
-    faqList.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const answer = item.querySelector('.faq-answer');
-        const inner = item.querySelector('.faq-answer-inner');
-        const isOpen = item.classList.contains('open');
-
-        // Close all
-        faqList.querySelectorAll('.faq-item.open').forEach(o => {
-          o.classList.remove('open');
-          o.querySelector('.faq-answer').style.height = '0';
-          o.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        });
-
-        if (!isOpen) {
-          item.classList.add('open');
-          answer.style.height = inner.offsetHeight + 'px';
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-  }
-
-  /* ---------- SCROLL REVEAL ---------- */
-  const revealObs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  function observeReveals() {
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-  }
-
-  /* ---------- INIT ---------- */
-  renderLeaderboard();
-  renderTestimonials();
-  renderFAQ();
-  observeReveals();
-
-  // Initial state
-  setNeedle(-30);
-
-})();
+// Initial load
+generateExcuse();
 </script>
 </body>
 </html>
